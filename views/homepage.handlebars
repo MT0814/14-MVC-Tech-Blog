@@ -1,0 +1,22 @@
+<!--Top cards -->
+<div class="container-fluid" id="recipes">
+
+  <div class="row">
+    {{#each comments as |comment|}}
+    <div class="col-lg-1 col-sm-1 small-cards">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">{{comment.comment}}</p>
+          <span class="bywho">By {{user.name}}</span>
+          <br>
+          <p class="card-text">{{comment.date}}</p>
+        </div>
+      </div>
+
+    </div>
+    {{/each}}
+
+
+  </div>
+
+</div>
