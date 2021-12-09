@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
         // If successful, redirect the browser to the account page
-      document.location.replace('/account-recipe');
+      document.location.replace('/account-comment');
     } else {
       alert('Failed to log in');
     }

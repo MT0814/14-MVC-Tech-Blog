@@ -1,7 +1,7 @@
 :root {
   --white: white;
   --gray: rgb(92, 92, 92);
-  --main: rgb(54, 54, 54);
+  --main: rgb(22, 22, 22);
   --light-grey: rgb(225, 225, 225);
 }
 
@@ -13,11 +13,11 @@
 }
 
 body {
-  background-color: var(--white);
+  background-color: var(--main);
 }
 
 main {
-  background-color: var(--white);
+  background-color: var(--main);
   display: flex;
 }
 
@@ -32,8 +32,8 @@ main {
 .navbar {
   display: flex;
   justify-content: space-evenly;
-  background-color: rgba(246, 246, 246, 0.972);
-  box-shadow: 0 0 10px gray;
+  background-color: rgba(0, 0, 0, 0.972);
+  box-shadow: 0 0 5px rgb(255, 255, 255);
   position: fixed;
   width: 100%;
   z-index: 22;
@@ -42,16 +42,20 @@ main {
 }
 
 .navbar-light .navbar-brand {
-  color: orange;
+  color:  rgb(121, 235, 255);
   font-size: 1.8em;
   font-weight: 600;
   letter-spacing: 0.08em;
   margin-left: 0.5em;
 }
 
+.navbar-light .navbar-brand:hover {
+  color:  rgb(157, 240, 255);
+}
+
 .navbar-light .navbar-nav .nav-link {
   position: relative;
-  color: var(--main);
+  color: var(--white);
   font-size: 1.15em;
   font-weight: 400;
   margin-right: 0.8em;
@@ -64,7 +68,7 @@ main {
 
 .navbar-light .navbar-nav .nav-link:hover {
   font-weight: 500;
-  color: black;
+  color: rgb(190, 245, 255);
 }
 
 .navbar-light .navbar-toggler {
@@ -76,7 +80,7 @@ li.nav-item {
 }
 
 .plus-btn {
-  color: orange;
+  color: rgb(121, 235, 255);
   font-size: 1.25em;
 }
 .plus-btn:hover {
@@ -98,7 +102,7 @@ li.nav-item {
 .tooltip-1 .tooltip1text {
   visibility: hidden;
   width: 12em;
-  background-color: orange;
+  background-color: rgb(190, 245, 255);
   color: #fff;
   text-align: center;
   border-radius: 6px;
@@ -121,7 +125,7 @@ li.nav-item {
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent orange transparent transparent;
+  border-color: transparent rgb(190, 245, 255) transparent transparent;
 }
 
 
@@ -134,19 +138,15 @@ li.nav-item {
 
 
 /* Cards */
-.top-cards {
-  margin-bottom: 3%;
-  justify-content: center;
-  display: flex;
-}
+
 .small-cards {
   justify-content: center;
   display: flex;
   margin-bottom: 3%;
 }
 
-.btn-orange {
-  background-color: orange;
+.btn-blue {
+  background-color: rgb(190, 245, 255);
   color: var(--white);
 }
 
@@ -164,7 +164,7 @@ li.nav-item {
 }
 
 h2.fs-5 {
-  color: orange;
+  color: green;
   letter-spacing: 0.065em;
   font-weight: 600;
 }
@@ -202,7 +202,7 @@ h5 {
 }
 
 .list-inline-item a:hover {
-  color: orange;
+  color: green;
 }
 
 /* Mobile Responsive */
@@ -266,7 +266,7 @@ h5 {
 /* login page css*/
 
 .btn-secondary:hover {
-  background-color: orange;
+  background-color: green;
   color: black;
   border: none;
 }
@@ -282,17 +282,13 @@ h5 {
   font-weight: 500;
 }
 
-/* recipes page */
+/*comments page */
 .img-center {
   text-align: center;
 }
 
-.recipe-image {
-  width: 50%;
-}
-
-.text-orange {
-  color: orange;
+.text-green {
+  color: rgb(190, 245, 255);
   font-weight: 600;
   margin-top: 8%;
 }
@@ -311,17 +307,17 @@ h5 {
 td{
   text-align: left;
 }
-/* account-recipe page */
+/* account-comment page */
 .ms-auto {
   color: var(--gray);
   margin-bottom: -1em;
 }
 
 .ms-auto:hover {
-  color: orange;
+  color: rgb(190, 245, 255);
 }
 
-/* account with no recipe page */
+/* account with no comment page */
 .welcome {
  font-size:1.1em;
  letter-spacing: 0.085em;
@@ -329,6 +325,6 @@ td{
 }
 
 .user { 
-  color: orange;
+  color: green;
   font-weight: 700;
 }

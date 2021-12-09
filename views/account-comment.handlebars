@@ -1,19 +1,19 @@
 <!-- Account Recipe Cards -->
-{{#if recipes.length}}
-<div class="container-fluid" id="recipes">
-    <div class="row account-cards recipe-list">
-        {{#each recipes as |recipe|}}
+{{#if comments.length}}
+<div class="container-fluid" id="comments">
+    <div class="row account-cards comment-list">
+        {{#each comments as |comment|}}
         <div class="col-lg-4 col-sm-12 small-cards">
             <div class="card">
-                <img src="{{recipe.dishPic}}" class="card-img-top" alt="{{recipe.dishPic}}" />
+            
                 <div class="card-body">
-                    <h5 class="card-title">{{recipe.dish}}</h5>
-                    <p class="card-text">{{recipe.dishDesc}}</p>
+                    <h5 class="card-title">{{comment.title}}</h5>
+                    <p class="card-text">{{comment.content}}</p>
 
                     <br />
                     <div class="hstack">
-                        <a href="/api/recipe/{{recipe.id}}" class="btn btn-orange mt-3" id="recipe-btn">Recipe</a>
-                        <div class="ms-auto"><i class="fa fa-trash-o" data-id="{{recipe.id}}" type="submit" style="font-size:35px;"></i></div>
+                        <a href="/api/comment/{{comment.id}}" class="btn btn-blue mt-3" id="comment-btn">View Comment</a>
+                        <div class="ms-auto"><i class="fa fa-trash-o" data-id="{{comment.id}}" type="submit" style="font-size:35px;"></i></div>
                     </div>
                 </div>
             </div>
@@ -23,13 +23,13 @@
 </div>
 
 {{else}}
-<!-- Account without Recipe -->
+<!-- Account without Comment -->
 <div class="container-fluid empty-text">
     <p class="text-center welcome">
-        <span class="user">{{username}}</span>, Welocme! It's empty now. Start to create your recipe today!</p>
-    <div class="text-center"><img src="https://media4.giphy.com/media/h2HTvVuKVS4daQaVuS/giphy.gif" width="50%"
+        <span class="user">{{username}}</span>, Welocme! It's empty now. Start to comment today!</p>
+    <div class="text-center"><img src="https://www.google.com/search?q=robot+gif&rlz=1C1ONGR_enUS974US974&sxsrf=AOaemvJRPAqssJkMr3m1-TjH447ElfGxMg:1639028536108&tbm=isch&source=iu&ictx=1&fir=CTBFIljEA-UWMM%252CQIsADtTxdrHjxM%252C_%253BcbzmVu67qAHQUM%252Cv_nS73FLiaeU-M%252C_%253BJh-dG0IuJGzcRM%252CK3NpRrETb3udXM%252C_%253ByC2Llm9C_cjQMM%252CuScaLoDwD_ktAM%252C_%253BKb6JdcWpTpgq-M%252CmQr0d-kQI2amCM%252C_%253BPmUtJLYm6lpOPM%252CEpo_MSnaJOchlM%252C_%253Bih17xCTpYqi2mM%252CbyAq3_52d8HNSM%252C_%253BmN-m3p3hdVfXtM%252CzOu6sOXAV9LFSM%252C_%253BY5qzVz55bcSCcM%252Cz8vaNJLEo70lhM%252C_%253BMvE9okzgazkpiM%252CYmOTmJXeDjZrEM%252C_%253B1jlID_u-gh_mlM%252Col3mXbxhCjLzUM%252C_%253BSG-1QkHGpqYbTM%252Cme8oLg7vVRfrOM%252C_%253B2in172SBoxLpVM%252CQhZ68Xh2OoB7EM%252C_%253BwePg7q7Azt1AEM%252CN7n23doiLyM1ZM%252C_&vet=1&usg=AI4_-kRyvsVjIwW0BfU1aTZJ0EFvV7qvFg&sa=X&ved=2ahUKEwjuta6Ngdb0AhVSVs0KHQcUBw0Q9QF6BAgOEAE#imgrc=k2mjwbbN9NNztM" width="50%"
             alt="cooking" /></div>
 </div>
 {{/if}}
 
-<script src="/js/delete-recipe.js"></script>
+<script src="/js/delete-comment.js"></script>

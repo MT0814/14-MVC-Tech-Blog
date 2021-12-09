@@ -5,18 +5,22 @@
       <label for="exampleFormControlInput1" class="form-label">Name</label>
       <input type="text" class="form-control" id="user_name" value={{ username }}>
     </div>
-  
+  <div class="mb-3 ">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <textarea type="text" class="form-control" id="title"
+        placeholder="Easy, simple and delicious dish which can be done in 25 mins"></textarea>
+    </div>
     <div class="mb-3 ">
-      <label for="exampleFormControlInput1" class="form-label">Comment</label>
-      <textarea type="text" class="form-control" id="comment"
+      <label for="exampleFormControlInput1" class="form-label">Content</label>
+      <textarea type="text" class="form-control" id="content"
         placeholder="Easy, simple and delicious dish which can be done in 25 mins"></textarea>
     </div>
     <div class="mb-3 ">
       <label for="exampleFormControlInput1" class="form-label">Date</label>
-      <input type="text" class="form-control" id="Date" placeholder={{format_date comment.date_created}}>
+      <input type="text" class="form-control" id="date" placeholder={{format_date comment.date_created}}>
     </div>
     
-    <button type="submit" class="btn btn-orange" id="save-btn">Save Recipe</button>
+    <button type="submit" class="btn btn-blue" id="save-btn">Save Comment</button>
 
   </form>
 

@@ -21,8 +21,11 @@ Comment.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
-    
-    comment: {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    content: {
       type: DataTypes.TEXT,
       allowNull: false
     },

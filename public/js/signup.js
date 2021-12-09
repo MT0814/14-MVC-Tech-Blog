@@ -14,7 +14,7 @@ const signupFormHandler = async (event) => {
       });
       
       if (response.ok) {
-        document.location.replace('/account-recipe');
+        document.location.replace('/account-comment');
       } else {
         alert(response.statusText);
       }

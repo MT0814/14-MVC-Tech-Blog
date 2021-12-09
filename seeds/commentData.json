@@ -1,8 +1,9 @@
 [
   {
     "user_id": 1,
-    "comments" :"Hello!",
-    "user_name" : "Millie"
+    "title" :"Hello!",
+    "content": "This is a Tech Blog, please post only tech0related things or questions here!",
+    "user_name": "Millie"
     }
   
 ]

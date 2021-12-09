@@ -4,20 +4,20 @@ const delButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
         console.log("hello2")
-        const response = await fetch(`/api/recipe/${id}`, {
+        const response = await fetch(`/api/comment/${id}`, {
             method: 'DELETE',
         });
 
         if (response.ok) {
-            document.location.replace('/account-recipe');
+            document.location.replace('/account-comment');
         } else {
-            alert('Failed to delete this recipe, please try it later.');
+            alert('Failed to delete this comment, please try it later.');
         }
     }
 };
 
 
 document
-    .querySelector('.recipe-list')
+    .querySelector('.comment-list')
     .addEventListener('click', delButtonHandler);
 

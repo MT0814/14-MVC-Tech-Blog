@@ -1,156 +1,122 @@
-## Project 2 - Chef Recipe Web Application
+# 14 Model-View-Controller (MVC): Tech Blog
 
-## Description
+## Your Task
 
-### Design Concept :
+Writing about tech can be just as important as making it. Developers spend plenty of time creating new applications and debugging existing codebases, but most developers also spend at least some of their time reading and writing about technical concepts, recent advancements, and new technologies. A simple Google search for any concept covered in this course returns thousands of think pieces and tutorials from developers of all skill levels!
 
-Everyone can be a Chef and save their yummy recipes in a place with a beautiful tiles presentation! Besides that, you may find more ideas here to create a New recipe!
-
-### Why Chef Recipe?
-
-Do you always have some pain-points like this?
-
-- I cook everyday, I don’t even know what should I cook today?
-- Why those recipes look so hard and complicated to follow up?
-- Want to save my yummy recipes somewhere and go back to check if I forget.
-
-### Our Plan is…
-
-- Build an easy, simple, tasty recipe book for housewives and someone who needs to cook at home almost everyday like a Chef
-- Provide a place to save those scrumptious, family recipes for those Chef Amateurs and share recipes with others.
-
-### Design Process:
-
-- Research : reference some market recipes websites, like allrecipes, simple recipes, food network, etc.
-- Plan and Design : plan what we can do and design the layout (html/css)
-- Build and Create : coding time!
-- Test : we test and code together.
-- Improve : there are still some unfinshed functions...
+Your task this week is to build a CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. You’ll build this site completely from scratch and deploy it to Heroku. Your app will follow the MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 ## User Story
 
 ```md
-AS A user I WANT to see some recipes cards with a dish name, a brief description and chef name SO THAT I can have an idea about what I can cook today
-
-As A user I WANT to see a recipe button on a recipe card SO THAT I can click it to enter a recipe page
-
-As A user I WANT to see a recipe page with dish name, short description, prep and cooking time, ingredients, directions, and nutrition facts
-
-AS A user I WANT to sign up SO THAT I can add recipes and save them on the recipe website
-
-AS A user I WANT to login the recipe website SO THAT I can add recipes and save them on the recipe website
-
-AS A user I WANT to see my name on the navbar after I log in
-
-AS A user I WANT to see a recipe form with dish name, short description, prep and cooking time, ingredients, directions, and nutrition facts colums SO THAT I can add a recipe
-
-AS A user I WANT to save my recipe on the recipe website SO THAT I can go back to check my recipes whenever I want
-
-AS A user I WANT to see my recipes showed on the homepage of the website SO THAT I can share my recipes with others
-
-AS A user I WANT to log out the recipe website SO THAT I can keep my account safe
-
-AS A user I WANT to know the recipe website's contact information SO THAT I can contact the recipe website
+AS A developer who writes about tech
+I WANT a CMS-style blog site
+SO THAT I can publish articles, blog posts, and my thoughts and opinions
 ```
 
 ## Acceptance Criteria
 
 ```md
-GIVEN a homepage presented with several cards
-WHEN I click one of cards' recipe button
-THEN I am able to enter that card's recipe
-THEN it shows a recipe page with dish name, dish description, preparation & cooking time, ingredients, directions with 4 steps, and then nutrition facts
-
-GIVEN a navbar presented a "Chef Recipe" logo, login, your recipe, and contact buttons
-WHEN I click the "Chef Recipe" logo button
-THEN it brings me to the homepage
-WHEN I click the login button
-THEN it pops up a login form
-WHEN I click your recipe button and I have not logged in
-THEN it pops up a tooltip "Log in please"
-WHEN I logged in
-THEN it shows the recipes I created
-WHEN I click the contact button
-THEN it brings me to the contact information
-
-GIVEN I don't have an account
-WHEN I click it
-THEN it pops up a login form with login and sign-up button
-THEN I click the sign-up button
-THEN it shows me the sign-up page
-WHEN I complete the form and click submit
-THEN it shows me the account page and the login button on the navbar changes to log out
-THEN your recipe button on navbar changes to my name's recipe  
-WHEN I click log out
-THEN I log out
-
-GIVEN I have an account
-WHEN I click log in button on the navbar
-THEN it shows me the account page and the your recipe change to my name's recipe
-
-GIVEN an add button on the navbar and I haven't logged in
-WHEN I click the add button
-THEN it pops up the login form
-THEN I login and it shows me the account page
-
-GIVEN I have logged in
-WHEN I click the add button on the navbar
-THEN it shows me the add recipe form
-
-GIVEN I have added a recipe in a recipe form
-WHEN I click submit button
-THEN it shows me the account page with a recipe card and a recipe button
-WHEN I click the recipe button
-THEN it shows me the recipe page
-
-GIVEN an account page with a recipe card with a delete button
-WHEN I click the delete button on a recipe card
-THEN it deletes the recipe card
+GIVEN a CMS-style blog site
+WHEN I visit the site for the first time
+THEN I am presented with the homepage, which includes existing blog posts if any have been posted; navigation links for the homepage and the dashboard; and the option to log in
+WHEN I click on the homepage option
+THEN I am taken to the homepage
+WHEN I click on any other links in the navigation
+THEN I am prompted to either sign up or sign in
+WHEN I choose to sign up
+THEN I am prompted to create a username and password
+WHEN I click on the sign-up button
+THEN my user credentials are saved and I am logged into the site
+WHEN I revisit the site at a later time and choose to sign in
+THEN I am prompted to enter my username and password
+WHEN I am signed in to the site
+THEN I see navigation links for the homepage, the dashboard, and the option to log out
+WHEN I click on the homepage option in the navigation
+THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
+WHEN I click on an existing blog post
+THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
+WHEN I enter a comment and click on the submit button while signed in
+THEN the comment is saved and the post is updated to display the comment, the comment creator’s username, and the date created
+WHEN I click on the dashboard option in the navigation
+THEN I am taken to the dashboard and presented with any blog posts I have already created and the option to add a new blog post
+WHEN I click on the button to add a new blog post
+THEN I am prompted to enter both a title and contents for my blog post
+WHEN I click on the button to create a new blog post
+THEN the title and contents of my post are saved and I am taken back to an updated dashboard with my new blog post
+WHEN I click on one of my existing posts in the dashboard
+THEN I am able to delete or update my post and taken back to an updated dashboard
+WHEN I click on the logout option in the navigation
+THEN I am signed out of the site
+WHEN I am idle on the site for more than a set time
+THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
 
-## License
+## Mock-Up
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+The following animation demonstrates the application functionality:
 
-## Technology Used
+![Animation cycles through signing into the app, clicking on buttons, and updating blog posts.](./Assets/14-mvc-homework-demo-01.gif) 
 
-Font End
+## Getting Started
 
-- HTML/ CSS/ Bootstrap ➡ Millie
-- Javascript ➡ Millie
+Your application’s folder structure must follow the Model-View-Controller paradigm. You’ll need to use the [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for your Views, use the [MySQL2](https://www.npmjs.com/package/mysql2) and [Sequelize](https://www.npmjs.com/package/sequelize) packages to connect to a MySQL database for your Models, and create an Express.js API for your Controllers.
 
-Back End
+You’ll also need the [dotenv package](https://www.npmjs.com/package/dotenv) to use environment variables, the [bcrypt package](https://www.npmjs.com/package/bcrypt) to hash passwords, and the [express-session](https://www.npmjs.com/package/express-session) and [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize) packages to add authentication.
 
-- Node.js
-- Express.js
-- Config (connection.js) ➡ Millie & Kaden
-- MVC
-- Models (Recipe/ User) ➡ Millie & Kaden 
-- Controllers (routes) ➡ Millie 
-- View (handlebars) ➡ Millie
-- Database (MySQL) 
-- Seeds ➡ Kaden & Millie
-- Authentication (express-session and cookies) ➡ Kaden & Millie
-- Environment Variables
-- Compression (new package) ➡ Millie
-- Web api Cloudinary (under construction) ➡ Kaden
-- Published to Heroku ➡ Millie
+**Note**: The [express-session](https://www.npmjs.com/package/express-session) package stores the session data on the client in a cookie. When you are idle on the site for more than a set time, the cookie will expire and you will be required to log in again to start a new session. This is the default behavior and you do not have to do anything to your application other than implement the npm package.
 
-## Future Improvement / Development
+## Grading Requirements
 
-- Be able to add an image while adding a recipe
-- Add edit recipe and sharing feature
-- Add a rating feature
+This homework is graded based on the following criteria:
 
-## Others
+### Technical Acceptance Criteria: 40%
 
-Website Screenshots
-![screenshot](./assets/chef-recipe-1.herokuapp.com_.png)
+* Satisfies all of the preceding acceptance criteria plus the following:
 
-Please click [here](https://chef-recipe-1.herokuapp.com/) for the Chef Recipe website
+    * Application’s folder structure follows the Model-View-Controller paradigm.
 
-Please click [here](https://drive.google.com/drive/folders/1X7Lffj1-SK8XnmeGp2y7EchXb7nExpmG?usp=sharing) for the Chef Recipe keynote and pdf file (presentation materials)
+    * Uses the [express-handlebars](https://www.npmjs.com/package/express-handlebars) package to implement Handlebars.js for your Views.
+
+    * Application must be deployed to Heroku.
+
+### Deployment: 32%
+
+* Application deployed at live URL.
+
+* Application loads with no errors.
+
+* Application GitHub URL submitted.
+
+* GitHub repository contains application code.
+
+### Application Quality: 15%
+
+* User experience is intuitive and easy to navigate.
+
+* User interface style is clean and polished.
+
+* Application resembles the mock-up functionality provided in the homework instructions.
+
+### Repository Quality: 13%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains quality readme file with description, screenshot, and link to deployed application.
+
+## Review
+
+You are required to submit BOTH of the following for review:
+
+* The URL of the functional, deployed application.
+
+* The URL of the GitHub repository, with a unique name and a readme describing the project.
 
 ---
-
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
