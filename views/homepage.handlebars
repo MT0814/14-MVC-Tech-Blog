@@ -1,5 +1,5 @@
 <!--Top cards -->
-<div class="container-fluid" id="recipes">
+<div class="container-fluid" id="comment">
 
   <div class="row">
     {{#each comments as |comment|}}
@@ -9,7 +9,7 @@
           <p class="card-text">{{comment.comment}}</p>
           <span class="bywho">By {{user.name}}</span>
           <br>
-          <p class="card-text">{{comment.date}}</p>
+          <p class="card-text">{{format_date comment.date_created}}</p>
         </div>
       </div>
 

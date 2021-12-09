@@ -1,13 +1,13 @@
 const router = require('express').Router();
 const { User } = require('../models');
-const Recipe = require('../models/Comment');
+const Comment = require('../models/Comment');
 const withAuth = require('../utils/auth');
 
 
 // route to get all comments
 router.get('/', async (req, res) => {
   try {
-    const recipeData = await Recipe.findAll({
+    const commentData = await Comment.findAll({
       include: [
         {
           model: User,
@@ -16,22 +16,19 @@ router.get('/', async (req, res) => {
       ],
     });
 
-    const recipes = recipeData.map((recipe) =>
-      recipe.get({ plain: true })
+    const comments = commentData.map((comment) =>
+      comment.get({ plain: true })
     );
-    const recipeLarge = recipes.splice(0,2)
-    const recipeSmall = recipes
-    console.log(recipeLarge)
-    console.log(recipeSmall)
+    const commentSmall = comments
     if (req.session.logged_in) {
       res.render('homepage', {
-        recipeLarge, recipeSmall,
+        commentSmall,
         logged_in: req.session.logged_in,
         username: req.session.username
       });
     } else {
       res.render('homepage', {
-        recipeLarge, recipeSmall
+        commentSmall
       });
     }
   } catch (err) {
@@ -40,24 +37,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-// route to get one recipe
-router.get('/recipe/:id', async (req, res) => {
-  try {
-    const recipeData = await Recipe.findByPk(req.params.id);
-    if (!recipeData) {
-      res.status(404).json({ message: 'No recipe with this id!' });
-      return;
-    }
-    const recipe = recipeData.get({ plain: true });
-    res.render('recipe', {recipe, username: req.session.username});
-  } catch (err) {
-    res.status(500).json(err);
-  };
-});
-
 
 // Use withAuth middleware to prevent access to route
-router.get('/add-recipe', withAuth, async (req, res) => {
+router.get('/add-comment', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
@@ -67,7 +49,7 @@ router.get('/add-recipe', withAuth, async (req, res) => {
 
     const user = userData.get({ plain: true });
     const username = user.name.split(' ').join('');
-    res.render('add-recipe', {
+    res.render('add-comment', {
       ...user,
       username: username,
       logged_in: true
@@ -81,57 +63,18 @@ router.get('/add-recipe', withAuth, async (req, res) => {
 
 router.get('/signup', (req, res) => {
   if (req.session.signed_up) {
-    res.redirect('/account-recipe');
+    res.redirect('/');
     return;
   }
   res.render('signup');
 });
 
 
-router.get('/account-recipe', async (req, res) => {
-  try {
-    if (req.session.logged_in) {
-      const recipeData = await Recipe.findAll({
-        where: {
-          user_id: req.session.user_id
-        },
-        include: [
-          {
-            model: User,
-            attributes: ['name'],
-          }
-        ]
-      })
-      // console.log(recipeData.length, 'the lenght of the data')
-      if (recipeData.length === 0) {
-        console.log('there is no data, but here is the user name', req.session.username)
-        res.render('account-recipe', {
-          logged_in: true,
-          username: req.session.username
-        })
-        return;
-      }
-      // console.log(recipeData, 'the data')
-      const recipes = recipeData.map((recipe) =>
-        recipe.get({ plain: true })
-      );
-
-      res.render('account-recipe', {
-        recipes,
-        logged_in: req.session.logged_in,
-        username: req.session.username
-      });
-    }
-  } catch (err) {
-    res.status(500).json(err)
-  }
-})
-
 // User login area
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
   if (req.session.logged_in) {
-    res.redirect('/account-recipe');
+    res.redirect('/');
     return;
   }
 

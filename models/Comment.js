@@ -16,7 +16,13 @@ Comment.init(
       primaryKey: true,
       autoIncrement: true
     },
-    Comment: {
+    date_created: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    
+    comment: {
       type: DataTypes.TEXT,
       allowNull: false
     },
