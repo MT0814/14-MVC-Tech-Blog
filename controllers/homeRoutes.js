@@ -19,16 +19,16 @@ router.get('/', async (req, res) => {
     const comments = commentData.map((comment) =>
       comment.get({ plain: true })
     );
-    const commentSmall = comments
+
     if (req.session.logged_in) {
       res.render('homepage', {
-        commentSmall,
+        comments,
         logged_in: req.session.logged_in,
         username: req.session.username
       });
     } else {
       res.render('homepage', {
-        commentSmall
+        comments
       });
     }
   } catch (err) {
@@ -44,7 +44,7 @@ router.get('/add-comment', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Recipe }],
+      include: [{ model: Comment }],
     });
 
     const user = userData.get({ plain: true });
@@ -63,7 +63,7 @@ router.get('/add-comment', withAuth, async (req, res) => {
 
 router.get('/signup', (req, res) => {
   if (req.session.signed_up) {
-    res.redirect('/');
+    res.redirect('/comment');
     return;
   }
   res.render('signup');
@@ -74,7 +74,7 @@ router.get('/signup', (req, res) => {
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
   if (req.session.logged_in) {
-    res.redirect('/');
+    res.redirect('/comment');
     return;
   }
 

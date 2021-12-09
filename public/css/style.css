@@ -1,7 +1,7 @@
 :root {
   --white: white;
   --gray: rgb(92, 92, 92);
-  --main: rgb(22, 22, 22);
+  --main:  rgb(26, 26, 26);
   --light-grey: rgb(225, 225, 225);
 }
 
@@ -13,11 +13,11 @@
 }
 
 body {
-  background-color: var(--main);
+  background-color: rgb(92, 92, 92);
 }
 
 main {
-  background-color: var(--main);
+  background-color: rgb(92, 92, 92);
   display: flex;
 }
 
@@ -32,8 +32,7 @@ main {
 .navbar {
   display: flex;
   justify-content: space-evenly;
-  background-color: rgba(0, 0, 0, 0.972);
-  box-shadow: 0 0 5px rgb(255, 255, 255);
+  background-color: var(--main);
   position: fixed;
   width: 100%;
   z-index: 22;
@@ -42,7 +41,7 @@ main {
 }
 
 .navbar-light .navbar-brand {
-  color:  rgb(121, 235, 255);
+  color:  rgb(33, 180, 199);
   font-size: 1.8em;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -50,7 +49,7 @@ main {
 }
 
 .navbar-light .navbar-brand:hover {
-  color:  rgb(157, 240, 255);
+  color:  rgb(125, 255, 249);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -68,7 +67,7 @@ main {
 
 .navbar-light .navbar-nav .nav-link:hover {
   font-weight: 500;
-  color: rgb(190, 245, 255);
+  color: rgb(87, 255, 247);
 }
 
 .navbar-light .navbar-toggler {
@@ -80,7 +79,7 @@ li.nav-item {
 }
 
 .plus-btn {
-  color: rgb(121, 235, 255);
+  color: rgb(33, 180, 199);
   font-size: 1.25em;
 }
 .plus-btn:hover {
@@ -102,8 +101,8 @@ li.nav-item {
 .tooltip-1 .tooltip1text {
   visibility: hidden;
   width: 12em;
-  background-color: rgb(190, 245, 255);
-  color: #fff;
+  background-color: rgb(33, 180, 199);
+  color: rgb(245, 245, 245);
   text-align: center;
   border-radius: 6px;
   padding: 2px 2px 2px 2px;
@@ -118,15 +117,15 @@ li.nav-item {
   transition: opacity 1s;
 }
 
-.tooltip-1 .tooltip1text::after {
+/* .tooltip-1 .tooltip1text::after {
   content: " ";
   position: absolute;
   left: 50%;
   margin-left: -5px;
   border-width: 5px;
   border-style: solid;
-  border-color: transparent rgb(190, 245, 255) transparent transparent;
-}
+  border-color: transparent rgb(33, 180, 199) transparent transparent;
+} */
 
 
 .tooltip-1:hover .tooltip1text {
@@ -145,17 +144,25 @@ li.nav-item {
   margin-bottom: 3%;
 }
 
+.card {
+  padding: 10px;
+  margin-top: 20px;
+  background-color:rgb(231, 231, 231);
+}
+
 .btn-blue {
-  background-color: rgb(190, 245, 255);
+  background-color: rgb(33, 180, 199);
   color: var(--white);
 }
 
-.card-text,
+
+
+/* .card-text,
 .card-title {
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-}
+} */
 
 /* footer */
 .py-5 {
@@ -163,8 +170,12 @@ li.nav-item {
   padding-bottom: 2em !important;
 }
 
+.footer-text {
+  color:white;
+}
+
 h2.fs-5 {
-  color: green;
+  color: rgb(33, 180, 199);
   letter-spacing: 0.065em;
   font-weight: 600;
 }
@@ -174,19 +185,19 @@ h2.fs-5 {
 }
 a {
   text-decoration: none;
-  color: rgb(129, 129, 129);
+  color: rgb(255, 255, 255);
 }
 
 footer {
   text-align: center;
-  background-color: rgba(246, 246, 246, 0.945);
+  background-color: rgb(26, 26, 26);
   margin-top: 1.5em;
 }
 
 h5 {
   font-size: 1.1em;
   font-weight: 500;
-  color: var(--main);
+  color: rgb(33, 180, 199);
 }
 
 .list-inline-item {
@@ -197,12 +208,12 @@ h5 {
 
 .list-inline-item a {
   position: relative;
-  color: rgb(129, 129, 129);
+  color: rgb(205, 255, 253);
   text-decoration: none;
 }
 
 .list-inline-item a:hover {
-  color: green;
+  color: rgb(33, 180, 199);
 }
 
 /* Mobile Responsive */
@@ -266,7 +277,7 @@ h5 {
 /* login page css*/
 
 .btn-secondary:hover {
-  background-color: green;
+  background-color: rgb(33, 180, 199);
   color: black;
   border: none;
 }
@@ -287,11 +298,6 @@ h5 {
   text-align: center;
 }
 
-.text-green {
-  color: rgb(190, 245, 255);
-  font-weight: 600;
-  margin-top: 8%;
-}
 
 .mt-x {
   margin-top: 5%;
@@ -314,7 +320,7 @@ td{
 }
 
 .ms-auto:hover {
-  color: rgb(190, 245, 255);
+  color: rgb(33, 180, 199);
 }
 
 /* account with no comment page */
@@ -325,6 +331,6 @@ td{
 }
 
 .user { 
-  color: green;
+  color: rgb(33, 180, 199);
   font-weight: 700;
 }
