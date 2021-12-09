@@ -3,6 +3,20 @@
     "name": "Millie",
     "email": "millie@me.com",
     "password": "123456789"
+  },
+  {
+    "name": "Mia",
+    "email": "mia@me.com",
+    "password": "123456789"
+  },
+  {
+    "name": "Matt",
+    "email": "matt@me.com",
+    "password": "123456789"
+  },
+  {
+    "name": "Cal",
+    "email": "cal@me.com",
+    "password": "123456789"
   }
-  
 ]

@@ -6,7 +6,7 @@ router.get("/:id", async (req, res) => {
   try {
     const commentData = await Comment.findByPk(req.params.id);
     const comment = commentData.get({ plain: true });
-    res.render("comment", {
+    res.render("account-comment", {
       comment,
       logged_in: req.session.logged_in,
       username: req.session.username,

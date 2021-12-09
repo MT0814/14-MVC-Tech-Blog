@@ -1,22 +1,20 @@
 <!--Top cards -->
+   {{#each comments as |comment|}}
 <div class="container-fluid" id="comment">
 
-  <div class="row">
-    {{#each comments as |comment|}}
-    <div class="col small-cards">
+    <div class="row">
+   
+    <div class="col-md-12 small-cards">
       <div class="card">
         <h5 class="card-title">{{comment.title}}</h5>
         <p class="card-text">{{comment.content}}</p>
-        <span class="bywho">By {{user.name}}</span>
+        <span class="bywho">By {{comment.user_name}}</span>
         <br>
         <p class="card-text">{{format_date comment.date_created}}</p>
       </div>
     </div>
-
   </div>
   {{/each}}
 
-
-</div>
 
 </div>
