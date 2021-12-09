@@ -1,7 +1,7 @@
 async function newFormHandler(event) {
   event.preventDefault();
   console.log("inside")
-  const user_name = document.querySelector('#user_name').value.trim();
+  const userName = document.querySelector('#user-name').value.trim();
   const comment = document.querySelector('#comment').value.trim();
   const date = document.querySelector('#date').value.trim();
   const idName = document.querySelector('#id-name').value.trim();
@@ -11,7 +11,7 @@ async function newFormHandler(event) {
   const response = await fetch(`/api/add-comment`, {
     method: 'POST',
     body: JSON.stringify({
-      user_name,
+      userName,
       comment,
       idName,
       date

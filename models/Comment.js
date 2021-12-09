@@ -29,7 +29,7 @@ Comment.init(
       type: DataTypes.TEXT,
       allowNull: false
     },
-    user_name:{
+    userName:{
       type: DataTypes.TEXT,
       allowNull: false
     },

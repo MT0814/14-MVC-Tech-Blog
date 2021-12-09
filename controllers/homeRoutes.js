@@ -63,18 +63,59 @@ router.get('/add-comment', withAuth, async (req, res) => {
 
 router.get('/signup', (req, res) => {
   if (req.session.signed_up) {
-    res.redirect('/comment');
+    res.redirect('/account-comment');
     return;
   }
   res.render('signup');
 });
 
 
+router.get('/account-comment', async (req, res) => {
+  try {
+    if (req.session.logged_in) {
+      const commentData = await Comment.findAll({
+        where: {
+          user_id: req.session.user_id
+        },
+        include: [
+          {
+            model: User,
+            attributes: ['name'],
+          }
+        ]
+      })
+
+      if (commentData.length === 0) {
+        console.log('there is no data, but here is the user name', req.session.username)
+        res.render('account-comment', {
+          logged_in: true,
+          username: req.session.username
+        })
+        return;
+      }
+
+      const comments = recipeData.map((comment) =>
+        comment.get({ plain: true })
+      );
+
+      res.render('account-comment', {
+        comments,
+        logged_in: req.session.logged_in,
+        username: req.session.username
+      });
+    }
+  } catch (err) {
+    res.status(500).json(err)
+  }
+})
+
+
+
 // User login area
 router.get('/login', (req, res) => {
   // If a session exists, redirect the request to the homepage
   if (req.session.logged_in) {
-    res.redirect('/comment');
+    res.redirect('/account-comment');
     return;
   }
 

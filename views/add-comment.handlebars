@@ -3,9 +3,13 @@
   <form>
     <div class="mb-3 ">
       <label for="exampleFormControlInput1" class="form-label">Name</label>
-      <input type="text" class="form-control" id="user_name" value={{ username }}>
+      <input type="text" class="form-control" id="user-name" value={{ username }}>
     </div>
-  <div class="mb-3 ">
+    <div class="mb-3 " style="display:none">
+      <label for="exampleFormControlInput1" class="form-label">Id</label>
+      <input type="text" class="form-control" id="id-name" value={{ id }}>
+    </div>
+    <div class="mb-3 ">
       <label for="exampleFormControlInput1" class="form-label">Title</label>
       <textarea type="text" class="form-control" id="title"
         placeholder="Easy, simple and delicious dish which can be done in 25 mins"></textarea>
@@ -19,7 +23,7 @@
       <label for="exampleFormControlInput1" class="form-label">Date</label>
       <input type="text" class="form-control" id="date" placeholder={{format_date comment.date_created}}>
     </div>
-    
+
     <button type="submit" class="btn btn-blue" id="save-btn">Save Comment</button>
 
   </form>
