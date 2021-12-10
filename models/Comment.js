@@ -19,8 +19,9 @@ Comment.init(
     date_created: {
       type: DataTypes.DATE,
       allowNull: false,
-      defaultValue: DataTypes.NOW,
+      defaultValue: Date.now
     },
+
     title: {
       type: DataTypes.STRING,
       allowNull: false
@@ -29,10 +30,10 @@ Comment.init(
       type: DataTypes.TEXT,
       allowNull: false
     },
-    userName:{
-      type: DataTypes.TEXT,
-      allowNull: false
-    },
+    // userName:{
+    //   type: DataTypes.TEXT,
+    //   allowNull: false
+    // },
     user_id: {
       type: DataTypes.INTEGER,
       references: {

@@ -3,24 +3,30 @@
 
     "title": "Hello!",
     "content": "This is a Tech Blog, please post only tech-related things or questions here!",
-    "userName": "Millie"
+    "userName": "Millie",
+    "date_created": "December 1, 2021 00:00:00 UTC"
   },
   {
 
     "title": "Hello!",
     "content": "This is a Tech Blog, please post only tech-related things or questions here!",
-    "userName": "Cal"
+    "userName": "Cal",
+    "date_created": "December 1, 2021 00:00:00 UTC"
+
   },
   {
 
     "title": "Hello!",
     "content": "This is a Tech Blog, please post only tech-related things or questions here!",
-    "userName": "Matt"
+    "userName": "Matt",
+    "date_created": "December 1, 2021 00:00:00 UTC"
+
   },
   {
 
     "title": "Hello!",
     "content": "This is a Tech Blog, please post only tech-related things or questions here!",
-    "userName": "Mia"
+    "userName": "Mia",
+    "date_created": "December 1, 2021 00:00:00 UTC"
   }
 ]

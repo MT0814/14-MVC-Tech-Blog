@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 body {
@@ -39,6 +39,18 @@ main {
   top: 0px;
   left: 0px;
 }
+.offcanvas-header {
+  background-color:var(--main);
+}
+.offcanvas-body{
+  background-color: var(--main);
+}
+.offcanvas-title {
+  font-size: 1.3em;
+}
+.btn-close-white {
+  filter: invert(1)
+}
 
 .navbar-light .navbar-brand {
   color:  rgb(33, 180, 199);
@@ -49,12 +61,12 @@ main {
 }
 
 .navbar-light .navbar-brand:hover {
-  color:  rgb(205, 255, 253);
+  color:rgb(125, 193, 202);
 }
 
 .navbar-light .navbar-nav .nav-link {
   position: relative;
-  color: var(--white);
+  color: rgb(33, 180, 199);
   font-size: 1.15em;
   font-weight: 400;
   margin-right: 0.8em;
@@ -67,7 +79,7 @@ main {
 
 .navbar-light .navbar-nav .nav-link:hover {
   font-weight: 500;
-  color: rgb(33, 180, 199);
+  color: rgb(125, 193, 202);
 }
 
 .navbar-light .navbar-toggler {
@@ -80,10 +92,10 @@ li.nav-item {
 
 .plus-btn {
   color: rgb(33, 180, 199);
-  font-size: 1.25em;
+  font-size: 1em;
 }
 .plus-btn:hover {
-  color: black;
+  color: rgb(205, 255, 253);
 }
 
 .tooltip-1 {
@@ -109,23 +121,13 @@ li.nav-item {
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  bottom: 150%;
+  bottom: 100%;
   left: 50%;
   margin-left: -60px;
   /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
   opacity: 0;
   transition: opacity 1s;
 }
-
-/* .tooltip-1 .tooltip1text::after {
-  content: " ";
-  position: absolute;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent rgb(33, 180, 199) transparent transparent;
-} */
 
 
 .tooltip-1:hover .tooltip1text {
@@ -143,6 +145,14 @@ li.nav-item {
   display: flex;
   margin-bottom: 3%;
 }
+.card-title {
+  font-weight: 700;
+  font-size: 1.3em;
+}
+
+.card-text {
+  font-weight: 500;
+}
 
 .card {
   padding: 10px;
@@ -155,14 +165,6 @@ li.nav-item {
   color: var(--white);
 }
 
-
-
-/* .card-text,
-.card-title {
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-} */
 
 /* footer */
 .py-5 {
@@ -178,7 +180,10 @@ h2.fs-5 {
   color: rgb(33, 180, 199);
   letter-spacing: 0.065em;
   font-weight: 600;
+
 }
+.fs-5 {
+  font-size: 1.5em!important;}
 
 .chef {
   margin-bottom: 10px;
@@ -283,6 +288,10 @@ h5 {
 }
 
 /* account page */
+
+.form-label {
+  color:whitesmoke;
+} 
 .form-top {
   width: 50%;
   margin-bottom: 3%;
@@ -328,6 +337,7 @@ td{
  font-size:1.1em;
  letter-spacing: 0.085em;
  font-weight: 600;
+ color:rgb(205, 255, 253);
 }
 
 .user { 

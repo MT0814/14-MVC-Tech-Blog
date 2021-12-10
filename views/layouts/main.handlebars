@@ -16,8 +16,7 @@
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
     rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="/css/style.css">
@@ -26,11 +25,95 @@
 
 <body>
   <header class="display-flex justify-space-between align-center p-2">
-
     <!-- Nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-light fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/"><img src="/images/bot.png" width="33px" alt="robot">
+          Tech Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar">
+          <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 171 171"
+            style=" fill:#000000;">
+            <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+              stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+              font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
+              <path d="M0,171.99406v-171.99406h171.99406v171.99406z" fill="none"></path>
+              <g fill="#21b4c7">
+                <path
+                  d="M14.25,35.625v14.25h142.5v-14.25zM14.25,78.375v14.25h142.5v-14.25zM14.25,121.125v14.25h142.5v-14.25z">
+                </path>
+              </g>
+            </g>
+          </svg>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> Tech Blog</h5>
+            <svg type="button"  data-bs-dismiss="offcanvas"
+              aria-label="Close"xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 171 171"
+              style=" fill:#000000;">
+              <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                style="mix-blend-mode: normal">
+                <path d="M0,171.99406v-171.99406h171.99406v171.99406z" fill="none"></path>
+                <g fill="#21b4c7">
+                  <path
+                    d="M33.5376,23.4624l-10.07519,10.07519l51.96241,51.9624l-51.96241,51.9624l10.07519,10.07519l51.9624,-51.9624l51.9624,51.9624l10.07519,-10.07519l-51.9624,-51.9624l51.9624,-51.9624l-10.07519,-10.07519l-51.9624,51.96241z">
+                  </path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+
+
+              <li class="nav-item">
+                {{#if logged_in}}
+                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal" id="logout">Log Out</a>
+                {{else}}
+                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</a>
+                {{/if}}
+              </li>
+              <li class="nav-item">
+                {{#if logged_in}}
+                <a class="nav-link" href="/account-comment">{{username}}</a>
+                {{else}}
+                <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <div class="tooltip-1"> Account
+                    <span class="tooltip1text">Log in please</span>
+                  </div>
+                </a>
+                {{/if}}
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+              <li>
+                {{#if logged_in}}
+                <a class="nav-link" href="/add-comment">
+                  <div class="tooltip-1"><i class="fa fa-plus plus-btn tooltip-1"></i><span class="tooltip1text">Add
+                      Your
+                      comment!</span>
+                  </div>
+                </a>
+                {{/if}}
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    {{!-- <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container-fluid mt-3">
-        <img src="/images/bot.png" width="3%" alt="robot"><a class="navbar-brand" href="/">Tech Blog</a>
+        <a class="navbar-brand" href="/"><img src="/images/bot.png" width="33px" alt="robot"> Tech Blog</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span>
@@ -46,13 +129,15 @@
               <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</a>
               {{/if}}
             </li>
-          <li class="nav-item">
-              {{#if logged_in}} 
-              <a class="nav-link" href="/account-comment"> Hello! {{username}}</a>
+            <li class="nav-item">
+              {{#if logged_in}}
+              <a class="nav-link" href="/account-comment">{{username}}</a>
               {{else}}
-              <a class="nav-link" href="/"><div class="tooltip-1"> Account
-                 <span class="tooltip1text">Log in please</span>
-                </div></a>
+              <a class="nav-link" href="/">
+                <div class="tooltip-1"> Account
+                  <span class="tooltip1text">Log in please</span>
+                </div>
+              </a>
               {{/if}}
             </li>
             <li class="nav-item">
@@ -72,7 +157,7 @@
         </div>
       </div>
 
-    </nav>
+    </nav> --}}
 
 
   </header>
@@ -85,7 +170,7 @@
     <div class="container py-5">
       <div class="row" id="contact">
         <div class="col-12">
-          <img class="chef" src="/images/bot.png" width="4%" alt="chef icon"><a href="/">
+          <img class="chef" src="/images/bot.png" width="40px" alt="chef icon"><a href="/">
             <h2 class="fs-5">Tech Blog</h2>
           </a>
           <ul class="list-unstyled small text-muted">
@@ -98,9 +183,11 @@
             <li class="list-inline-item"><a href="https://www.instagram.com/explore/search/keyword/?q=food%20recipes"
                 target="_blank"><i class="fa fa-instagram list-item" aria-hidden="true" style="font-size:24px"></i></a>
             </li>
-            <li class="footer-text mb-2">Designed and built by Tech Blog Team.</li>
-            <li class="footer-text mb-2">© 2021 Tech Blog Team. All Rights Reserved.</li>
-            <a href="https://icons8.com/icon/82749/menu"><li  class="footer-text mb-2">Menu icon by Icons8</li></a>
+            <li class="footer-text mb-2">Designed and built by Millie Tsai.</li>
+            <li class="footer-text mb-2">© 2021 mini bot tech. All Rights Reserved.</li>
+            <a href="https://icons8.com/icon/82749/menu">
+              <li class="footer-text mb-2">Menu icon by Icons8</li>
+            </a>
 
           </ul>
         </div>

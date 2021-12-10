@@ -20,7 +20,7 @@ router.get("/:id", async (req, res) => {
 
 
 
-// delete one recipe by its id
+// delete one comment by its id
 
 router.delete('/:id', async (req, res) => {
   try {

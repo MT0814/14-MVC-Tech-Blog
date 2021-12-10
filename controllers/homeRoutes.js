@@ -94,7 +94,7 @@ router.get('/account-comment', async (req, res) => {
         return;
       }
 
-      const comments = recipeData.map((comment) =>
+      const comments = commentData.map((comment) =>
         comment.get({ plain: true })
       );
 

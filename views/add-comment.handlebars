@@ -1,10 +1,14 @@
 <!-- add comment page -->
 <div class="container-fluid form-top new-comment-form">
   <form>
-    <div class="mb-3 ">
-      <label for="exampleFormControlInput1" class="form-label">Name</label>
-      <input type="text" class="form-control" id="user-name" value={{ username }}>
-    </div>
+     {{!-- <div class="mb-3 ">
+      <label for="exampleFormControlInput1" class="form-label">Date</label>
+      <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY">
+    </div> --}}
+    {{!-- <div class="mb-3 ">
+      <label for="exampleFormControlInput1" class="form-label">Your Name</label>
+      <input type="text" class="form-control" id="user-name" value={{ username }} placeholder="Millie Tsai">
+    </div> --}}
     <div class="mb-3 " style="display:none">
       <label for="exampleFormControlInput1" class="form-label">Id</label>
       <input type="text" class="form-control" id="id-name" value={{ id }}>
@@ -12,17 +16,14 @@
     <div class="mb-3 ">
       <label for="exampleFormControlInput1" class="form-label">Title</label>
       <textarea type="text" class="form-control" id="title"
-        placeholder="Easy, simple and delicious dish which can be done in 25 mins"></textarea>
+        placeholder="new technology 2021"></textarea>
     </div>
     <div class="mb-3 ">
       <label for="exampleFormControlInput1" class="form-label">Content</label>
       <textarea type="text" class="form-control" id="content"
-        placeholder="Easy, simple and delicious dish which can be done in 25 mins"></textarea>
+        placeholder="Artificial Intelligence (AI) and Machine Learning"></textarea>
     </div>
-    <div class="mb-3 ">
-      <label for="exampleFormControlInput1" class="form-label">Date</label>
-      <input type="text" class="form-control" id="date" placeholder={{format_date comment.date_created}}>
-    </div>
+   
 
     <button type="submit" class="btn btn-blue" id="save-btn">Save Comment</button>
 
