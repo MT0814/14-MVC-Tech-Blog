@@ -1,32 +1,43 @@
 [
   {
-
+    "user_id":1,
+    "title": "Welcome to Minibot Tech Blog!",
+    "image":"/images/bot.png",
+    "content": "You can leave any comments related to any new, old tech info. or discuss with others with your innovative idea about them.",
+    "username": "Minibot Tech",
+    "date_created": "December 1, 2021 10:00:00 UTC"
+  },
+  {
+    "user_id":2,
     "title": "BB-8",
-    "content": "BB-8, sometimes spelled and pronounced Beebee-Ate and nicknamed BB, was a BB-series astromech droid who operated approximately thirty years after the Battle of Endor. He had a dome head, similar to that of R2 series astromech droids, with the bulk of his body made up of a ball on which the droid's head rolled. BB-8 was mostly white, with some silver and orange on his body, as well as a black photoreceptor. The droid belonged to Resistance pilot Poe Dameron, whom he accompanied during his flights on his T-70 X-wing starfighter.",
+    "image":"/images/BB8-Fathead.png",
+    "content": "BB-8, sometimes spelled and pronounced Beebee-Ate and nicknamed BB, was a BB-series astromech droid who operated approximately thirty years after the Battle of Endor. He had a dome head, similar to that of R2 series astromech droids, with the bulk of his body made up of a ball on which the droid's head rolled. BB-8 was mostly white, with some silver and orange on his body, as well as a black photoreceptor. The droid belonged to Resistance pilot Poe Dameron, whom he accompanied during his flights on his T-70 X-wing starfighter. Source:wikipedia.",
     "username": "Millie",
-    "date_created": "December 1, 2021 00:00:00 UTC"
+    "date_created": "December 2, 2021 10:00:00 UTC"
   },
   {
-
+    "user_id":3,
     "title": "R2-D2",
-    "content": "A resourceful astromech droid, R2-D2 served Padmé Amidala, Anakin Skywalker and Luke Skywalker in turn, showing great bravery in rescuing his masters and their friends from many perils.",
+    "image":"/images/ArtooTFA2-Fathead.png",
+    "content": "R2-D2, pronounced Artoo-Detoo and often referred to as R2 (Artoo), was an R2-series astromech droid manufactured by Industrial Automaton with masculine programming. A smart, spunky droid who would serve a multitude of masters over his lifetime, R2-D2 was never given a full memory wipe (apart from a partial wipe of select information by Cad Bane during the senate hostage crisis) nor did he ever receive new programming, with these factors resulting in an adventurous and independent attitude. Often finding himself in pivotal moments in galactic history, his bravery and ingenuity saved the galaxy on numerous occasions. Source:wikipedia.",
     "username": "Cal",
-    "date_created": "December 1, 2021 00:00:00 UTC"
-
+    "date_created": "December 3, 2021 10:00:00 UTC"
   },
   {
-
+    "user_id":4,
     "title": "C-3PO",
-    "content": "C-3PO is a droid programmed for etiquette and protocol, built by the heroic Jedi Anakin Skywalker, and a constant companion to astromech R2-D2. Over the years, he was involved in some of the galaxy's most defining moments and thrilling battles -- and is fluent in more than seven million forms of communication.",
+    "image":"/images/C-3PO.png",
+    "content": "C-3PO, sometimes spelled See-Threepio, often referred to as Threepio and by some as 3-So, was a 3PO-series protocol droid designed to interact with organics, programmed primarily for etiquette and protocol. He was fluent in over six million forms of communication, and developed a fussy and worry-prone personality throughout his many decades of operation. Along with his counterpart, the astromech droid R2-D2, C-3PO constantly found himself directly involved in pivotal moments of galactic history, and aided in saving the galaxy on many occasions. Source:wikipedia.",
     "username": "Matt",
-    "date_created": "December 1, 2021 00:00:00 UTC"
+    "date_created": "December 4, 2021 10:00:00 UTC"
 
   },
   {
-
+    "user_id":5,
     "title": "HTML",
-    "content": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript)",
+    "image":"/images/640px-HTML5_logo.png",
+    "content": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript). Source:wikipedia.",
     "username": "Mia",
-    "date_created": "December 1, 2021 00:00:00 UTC"
+    "date_created": "December 5, 2021 10:00:00 UTC"
   }
 ]

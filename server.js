@@ -40,7 +40,7 @@ app.use(compression());
 
 app.use(routes);
 
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: false}).then(() => {
   // Starts the server to begin listening
   app.listen(PORT, () => {
     console.log('Server listening on: http://localhost:' + PORT);

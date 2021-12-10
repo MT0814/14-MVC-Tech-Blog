@@ -1,20 +1,18 @@
 async function newFormHandler(event) {
   event.preventDefault();
   console.log("inside")
-  // const userName = document.querySelector('#user-name').value.trim();
-  const content = document.querySelector('#content').value.trim();
   const title = document.querySelector('#title').value.trim();
-  // const idName = document.querySelector('#id-name').value.trim();
+  const content = document.querySelector('#content').value.trim();
+  const image ="images/default.jpg";
 
   if (content && title) {
     // Send fetch request to add a new comment
     const response = await fetch(`/api/add-comment`, {
       method: 'POST',
       body: JSON.stringify({
-        // userName,
+        title,
         content,
-        title
-        // idName
+        image
       }),
       headers: {
         'Content-Type': 'application/json',

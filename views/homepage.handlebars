@@ -1,17 +1,23 @@
 
-
 <div class="container-fluid" id="comment">
-  {{#each comments as |comment|}}
-  <div class="row">
-    <div class="col small-cards">
-      <div class="card">
-        <h5 class="card-title">{{comment.title}}</h5>
-        <p class="card-text">{{comment.content}}</p>
-        <span class="bywho">Created by {{username}} on {{format_date comment.date_created}} </span>
 
+  <div class="row">
+      {{#each comments as |comment|}}
+    <div class="col-lg-3 col-sm-12 small-cards">
+      <div class="card">
+        <img src="{{comment.image}}" width="10px" class="card-img-top" alt="{{comment.title}}">
+        <div class="card-body">
+          <h5 class="card-title">{{comment.title}}</h5>
+          <p class="card-text">{{comment.content}}</p>
+          <span class="bywho">Created by <span class="username">{{username}}</span> on {{format_date
+            comment.date_created}} </span>
+        </div>
       </div>
     </div>
+      {{/each}}
   </div>
 
-  {{/each}}
+
 </div>
+
+

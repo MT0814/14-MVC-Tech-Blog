@@ -9,7 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 body {
@@ -61,7 +61,8 @@ main {
 }
 
 .navbar-light .navbar-brand:hover {
-  color:rgb(125, 193, 202);
+  color:    rgb(33, 180, 199);
+  text-shadow: 0 1px 10px rgb(255, 255, 255);
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -165,6 +166,14 @@ li.nav-item {
   color: var(--white);
 }
 
+.bywho{
+  color: rgb(148, 148, 148)
+;}
+
+.username {
+  color:rgb(60, 168, 182);
+}
+
 
 /* footer */
 .py-5 {
@@ -185,7 +194,7 @@ h2.fs-5 {
 .fs-5 {
   font-size: 1.5em!important;}
 
-.chef {
+.bot {
   margin-bottom: 10px;
 }
 a {
@@ -286,7 +295,6 @@ h5 {
   color: black;
   border: none;
 }
-
 
 
 .form-label {

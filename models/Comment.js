@@ -21,10 +21,13 @@ Comment.init(
       allowNull: false,
       defaultValue: Date.now
     },
-
     title: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    image:{
+      type: DataTypes.TEXT,
+      allowNull: true,
     },
     content: {
       type: DataTypes.TEXT,

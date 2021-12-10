@@ -1,9 +1,9 @@
 const delButtonHandler = async (event) => {
     
-    console.log("hello 1")
+    console.log("hello delete")
     if (event.target.hasAttribute('data-id')) {
         const id = event.target.getAttribute('data-id');
-        console.log("hello2")
+
         const response = await fetch(`/api/comment/${id}`, {
             method: 'DELETE',
         });
