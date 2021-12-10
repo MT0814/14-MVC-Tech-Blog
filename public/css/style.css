@@ -122,7 +122,7 @@ li.nav-item {
   position: absolute;
   z-index: 1;
   bottom: 100%;
-  left: 50%;
+  left: 10%;
   margin-left: -60px;
   /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
   opacity: 0;
@@ -287,7 +287,7 @@ h5 {
   border: none;
 }
 
-/* account page */
+
 
 .form-label {
   color:whitesmoke;
@@ -307,7 +307,6 @@ h5 {
   text-align: center;
 }
 
-
 .mt-x {
   margin-top: 5%;
 }
@@ -323,14 +322,25 @@ td{
   text-align: left;
 }
 /* account-comment page */
+
+.fa.fa-trash-o{
+  margin-left: 90px;
+ }
+ 
 .ms-auto {
   color: var(--gray);
   margin-bottom: -1em;
+  margin-top: 10px;
 }
 
-.ms-auto:hover {
+.edit:hover{
   color: rgb(33, 180, 199);
 }
+
+.trash:hover{
+  color: rgb(33, 180, 199);
+}
+
 
 /* account with no comment page */
 .welcome {

@@ -10,13 +10,12 @@
                     <h5 class="card-title">{{comment.title}}</h5>
                     <p class="card-text">{{comment.content}}</p>
                     <span class="bywho">Created by {{comment.userName}} on {{format_date comment.date_created}} </span>
-                    <br />
-                    <div>
-                        <a href="/api/comment/{{comment.id}}" class="btn btn-blue mt-3" id="comment-btn">View
-                            Comment</a>
-                        <div class="ms-auto"><i class="fa fa-trash-o" data-id="{{comment.id}}" type="submit"
-                                style="font-size:35px;"></i></div>
-                    </div>
+
+                    <div class="ms-auto"><i class="fa fa-edit edit" data-id1="{{comment.id}}" type="submit"
+                            style="font-size:32px;"></i><i class="fa fa-trash-o trash" data-id="{{comment.id}}" type="submit"
+                            style="font-size:35px;"></i></div>
+
+
                 </div>
             </div>
         </div>

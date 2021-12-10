@@ -30,10 +30,10 @@ Comment.init(
       type: DataTypes.TEXT,
       allowNull: false
     },
-    // userName:{
-    //   type: DataTypes.TEXT,
-    //   allowNull: false
-    // },
+    username:{
+      type: DataTypes.STRING,
+      allowNull: true
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
