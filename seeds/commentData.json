@@ -1,31 +1,31 @@
 [
   {
 
-    "title": "Hello!",
-    "content": "This is a Tech Blog, please post only tech-related things or questions here!",
+    "title": "BB-8",
+    "content": "BB-8, sometimes spelled and pronounced Beebee-Ate and nicknamed BB, was a BB-series astromech droid who operated approximately thirty years after the Battle of Endor. He had a dome head, similar to that of R2 series astromech droids, with the bulk of his body made up of a ball on which the droid's head rolled. BB-8 was mostly white, with some silver and orange on his body, as well as a black photoreceptor. The droid belonged to Resistance pilot Poe Dameron, whom he accompanied during his flights on his T-70 X-wing starfighter.",
     "username": "Millie",
     "date_created": "December 1, 2021 00:00:00 UTC"
   },
   {
 
-    "title": "Hello!",
-    "content": "This is a Tech Blog, please post only tech-related things or questions here!",
+    "title": "R2-D2",
+    "content": "A resourceful astromech droid, R2-D2 served Padmé Amidala, Anakin Skywalker and Luke Skywalker in turn, showing great bravery in rescuing his masters and their friends from many perils.",
     "username": "Cal",
     "date_created": "December 1, 2021 00:00:00 UTC"
 
   },
   {
 
-    "title": "Hello!",
-    "content": "This is a Tech Blog, please post only tech-related things or questions here!",
+    "title": "C-3PO",
+    "content": "C-3PO is a droid programmed for etiquette and protocol, built by the heroic Jedi Anakin Skywalker, and a constant companion to astromech R2-D2. Over the years, he was involved in some of the galaxy's most defining moments and thrilling battles -- and is fluent in more than seven million forms of communication.",
     "username": "Matt",
     "date_created": "December 1, 2021 00:00:00 UTC"
 
   },
   {
 
-    "title": "Hello!",
-    "content": "This is a Tech Blog, please post only tech-related things or questions here!",
+    "title": "HTML",
+    "content": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript)",
     "username": "Mia",
     "date_created": "December 1, 2021 00:00:00 UTC"
   }

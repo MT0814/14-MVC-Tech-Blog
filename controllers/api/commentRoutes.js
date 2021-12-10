@@ -18,6 +18,30 @@ router.get("/:id", async (req, res) => {
 })
 
 
+router.put('/:id', async (req, res) => {
+  // Where is this action method sending the data from the body of the fetch request? Why?
+  // It is sending the data to the Model so that one comment can be updated with new data in the database.
+  try {
+    const comment = await Comment.update(
+      {
+        title: req.body.title,
+        content: req.body.content,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    );
+
+    // The updated data (comment) is then sent back to handler that dispatched the fetch request.
+    res.status(200).json(comment);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+
 
 
 // delete one comment by its id

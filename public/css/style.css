@@ -121,8 +121,8 @@ li.nav-item {
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  bottom: 100%;
-  left: 10%;
+/* bottom:100%; */
+  left: 200%;
   margin-left: -60px;
   /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
   opacity: 0;
@@ -324,13 +324,17 @@ td{
 /* account-comment page */
 
 .fa.fa-trash-o{
-  margin-left: 90px;
+  margin-left: 50%;
  }
  
 .ms-auto {
   color: var(--gray);
   margin-bottom: -1em;
   margin-top: 10px;
+}
+
+.edit {
+  color: var(--gray);
 }
 
 .edit:hover{

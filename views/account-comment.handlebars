@@ -3,17 +3,17 @@
 <div class="container-fluid" id="comments">
     <div class="row account-cards comment-list">
         {{#each comments as |comment|}}
-        <div class="col small-cards">
+        <div class="col-lg-3 col-sm-12 small-cards">
             <div class="card">
 
                 <div class="card-body">
                     <h5 class="card-title">{{comment.title}}</h5>
                     <p class="card-text">{{comment.content}}</p>
-                    <span class="bywho">Created by {{comment.userName}} on {{format_date comment.date_created}} </span>
-
-                    <div class="ms-auto"><i class="fa fa-edit edit" data-id1="{{comment.id}}" type="submit"
-                            style="font-size:32px;"></i><i class="fa fa-trash-o trash" data-id="{{comment.id}}" type="submit"
-                            style="font-size:35px;"></i></div>
+                    <span class="bywho">Created by {{username}} on {{format_date comment.date_created}} </span>
+                    </br>
+                    <div class="ms-auto"><a class="edit"><i class="fa fa-edit" type="submit"
+                            style="font-size:32px;"></i></a><i class="fa fa-trash-o trash" data-id="{{comment.id}}"
+                            type="submit" style="font-size:35px;"></i></div>
 
 
                 </div>
@@ -33,3 +33,4 @@
 {{/if}}
 
 <script src="/js/delete-comment.js"></script>
+<script src="/js/edit-comment.js"></script>

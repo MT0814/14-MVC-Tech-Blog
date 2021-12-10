@@ -4,7 +4,6 @@ async function newFormHandler(event) {
   // const userName = document.querySelector('#user-name').value.trim();
   const content = document.querySelector('#content').value.trim();
   const title = document.querySelector('#title').value.trim();
-
   // const idName = document.querySelector('#id-name').value.trim();
 
   if (content && title) {
@@ -14,7 +13,7 @@ async function newFormHandler(event) {
       body: JSON.stringify({
         // userName,
         content,
-        title,
+        title
         // idName
       }),
       headers: {

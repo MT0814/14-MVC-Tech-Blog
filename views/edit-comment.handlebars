@@ -1,0 +1,27 @@
+<!-- This is the form for updating a comment. According to MVC framework, what is this form responsible for? -->
+<!-- This form is responsible for the UI logic, or the components in the View that the user will interact with. -->
+<!--What isn't it responsible for? -->
+<!--It is not responsible for data-related logic, requests, or business-logic. -->
+
+<div class="container-fluid form-top ">
+  <h2>
+    Update Your Comment
+  </h2>
+  <form class="edit-comment-form">
+    <div class="mb-3 ">
+      <label for="exampleFormControlInput1" class="form-label">Title</label>
+      <textarea type="text" class="form-control" id="title"
+        placeholder="new technology 2021">{{comment.title}}</textarea>
+    </div>
+    <div class="mb-3 ">
+      <label for="exampleFormControlInput1" class="form-label">Content</label>
+      <textarea type="text" class="form-control" id="content"
+        placeholder="Artificial Intelligence (AI) and Machine Learning">{{comment.content}}</textarea>
+    </div>
+    <br>
+       <button type="submit" value="Submit"class="btn btn-blue">
+      Submit
+    </button>
+  </form>
+</div>
+<script src="/js/edit-comment.js"></script>
