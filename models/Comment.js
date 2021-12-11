@@ -25,7 +25,7 @@ Comment.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    image:{
+    image: {
       type: DataTypes.TEXT,
       allowNull: true,
     },
@@ -33,7 +33,7 @@ Comment.init(
       type: DataTypes.TEXT,
       allowNull: false
     },
-    username:{
+    username: {
       type: DataTypes.STRING,
       allowNull: true
     },

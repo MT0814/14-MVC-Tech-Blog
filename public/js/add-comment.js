@@ -3,7 +3,7 @@ async function newFormHandler(event) {
   console.log("inside")
   const title = document.querySelector('#title').value.trim();
   const content = document.querySelector('#content').value.trim();
-  const image ="images/default.jpg";
+  const image = "images/default.jpg";
 
 
   if (content && title) {
@@ -13,7 +13,7 @@ async function newFormHandler(event) {
       body: JSON.stringify({
         title,
         content,
-        image, 
+        image,
       }),
       headers: {
         'Content-Type': 'application/json',
