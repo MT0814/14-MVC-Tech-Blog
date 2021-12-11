@@ -5,6 +5,7 @@ async function newFormHandler(event) {
   const content = document.querySelector('#content').value.trim();
   const image ="images/default.jpg";
 
+
   if (content && title) {
     // Send fetch request to add a new comment
     const response = await fetch(`/api/add-comment`, {
@@ -12,7 +13,7 @@ async function newFormHandler(event) {
       body: JSON.stringify({
         title,
         content,
-        image
+        image, 
       }),
       headers: {
         'Content-Type': 'application/json',
