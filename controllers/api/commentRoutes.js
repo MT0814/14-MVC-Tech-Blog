@@ -19,7 +19,7 @@ router.get("/:id", async (req, res) => {
 
 
 router.put('/:id', async (req, res) => {
-  // Where is this action method sending the data from the body of the fetch request? Why?
+
   // It is sending the data to the Model so that one comment can be updated with new data in the database.
   try {
     const comment = await Comment.update(

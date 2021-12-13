@@ -9,7 +9,7 @@
                 <div class="card-body">
                     <h5 class="card-title">{{comment.title}}</h5>
                     <p class="card-text">{{comment.content}}</p>
-                    <span class="bywho">Created by <span class="username">{{username}}</span> on {{format_date
+                    <span class="bywho">Created by <span class="username">{{user.name}}</span> on {{format_date
                         comment.date_created}} </span>
                     </br>
                     <div class="ms-auto"><a class="edit" href="/edit-comment/{{comment.id}}"><i class="fa fa-edit" type="submit"

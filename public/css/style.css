@@ -52,6 +52,11 @@ main {
   filter: invert(1);
 }
 
+.offcanvas-title {
+  letter-spacing: 0.085em;
+  font-size: 1.5em;
+}
+
 .navbar-light .navbar-brand {
   color: rgb(33, 180, 199);
   font-size: 1.8em;
@@ -61,8 +66,7 @@ main {
 }
 
 .navbar-light .navbar-brand:hover {
-  color: rgb(33, 180, 199);
-  text-shadow: 0 1px 10px rgb(255, 255, 255);
+  color: rgb(125, 193, 202);
 }
 
 .navbar-light .navbar-nav .nav-link {
