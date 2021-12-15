@@ -11,7 +11,7 @@ async function editFormHandler(event) {
   // What part of our application will handle this 'put' request?
   // The Controller will handle this 'put' request.
   console.log("value", id)
-  const response = await fetch(`/api/account-comment/${id}`, {
+  const response = await fetch(`/api/edit-comment/${id}`, {
     method: 'PUT',
     body: JSON.stringify({
       title,
@@ -25,8 +25,9 @@ async function editFormHandler(event) {
   // What happens if the response is ok?
   // If the response is ok, that means that the comment was updated successfully. 
   if (response.ok) {
-    document.location.replace(`/account-comment/${id}`);
+    document.location.replace(`/account-comment`);
   } else {
+    console.log(response)
     alert('Failed to edit comment');
   }
 }

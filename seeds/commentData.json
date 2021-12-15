@@ -1,5 +1,6 @@
 [
   {
+    "id":1,
     "user_id":1,
     "title": "Welcome to Minibot Tech Blog!",
     "image":"/images/bot.png",
@@ -7,6 +8,8 @@
     "date_created": "December 1, 2021 10:00:00 UTC"
   },
   {
+    
+    "id":2,
     "user_id":2,
     "title": "BB-8",
     "image":"/images/BB8-Fathead.png",
@@ -14,23 +17,27 @@
     "date_created": "December 2, 2021 10:00:00 UTC"
   },
   {
+    
+    "id":3,
     "user_id":3,
     "title": "R2-D2",
     "image":"/images/ArtooTFA2-Fathead.png",
     "content": "R2-D2, pronounced Artoo-Detoo and often referred to as R2 (Artoo), was an R2-series astromech droid manufactured by Industrial Automaton with masculine programming. A smart, spunky droid who would serve a multitude of masters over his lifetime, R2-D2 was never given a full memory wipe (apart from a partial wipe of select information by Cad Bane during the senate hostage crisis) nor did he ever receive new programming, with these factors resulting in an adventurous and independent attitude. Often finding himself in pivotal moments in galactic history, his bravery and ingenuity saved the galaxy on numerous occasions. Source:wikipedia.",
-
     "date_created": "December 3, 2021 10:00:00 UTC"
   },
   {
+    
+    "id":4,
     "user_id":4,
     "title": "C-3PO",
     "image":"/images/C-3PO.png",
     "content": "C-3PO, sometimes spelled See-Threepio, often referred to as Threepio and by some as 3-So, was a 3PO-series protocol droid designed to interact with organics, programmed primarily for etiquette and protocol. He was fluent in over six million forms of communication, and developed a fussy and worry-prone personality throughout his many decades of operation. Along with his counterpart, the astromech droid R2-D2, C-3PO constantly found himself directly involved in pivotal moments of galactic history, and aided in saving the galaxy on many occasions. Source:wikipedia.",
-
     "date_created": "December 4, 2021 10:00:00 UTC"
 
   },
   {   
+    
+    "id":5,
     "user_id":5,
     "title": "HTML",
     "image":"/images/640px-HTML5_logo.png",

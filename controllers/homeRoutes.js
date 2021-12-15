@@ -59,19 +59,18 @@ router.get('/add-comment', withAuth, async (req, res) => {
   }
 });
 
-router.get('/edit-comment', withAuth, async (req, res) => {
+router.get('/edit-comment/:id', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Comment }],
+
+    const commentData = await Comment.findByPk(req.params.id, {
+
+      include: [{ model:User}],
     });
 
-    const user = userData.get({ plain: true });
-    const username = user.name.split(' ').join('');
+    const comment = commentData.get({ plain: true });
+    console.log(comment)
     res.render('edit-comment', {
-      ...user,
-      username: username,
+      ...comment,
       logged_in: true
     });
   } catch (err) {
