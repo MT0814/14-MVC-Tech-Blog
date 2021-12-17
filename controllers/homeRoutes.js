@@ -38,6 +38,24 @@ router.get('/', async (req, res) => {
 });
 
 
+
+// route to get one comment to reply???
+router.get('/:id', withAuth, async (req, res) => {
+  try {
+    const commentData = await Comment.findByPk(req.params.id);
+    if (!commentData) {
+      res.status(404).json({ message: 'No comment with this id!' });
+      return;
+    }
+    const comment = commentData.get({ plain: true });
+    res.render('add-comment', { comment, username: req.session.username });
+  } catch (err) {
+    res.status(500).json(err);
+  };
+});
+
+
+
 // Use withAuth middleware to prevent access to route
 router.get('/add-comment', withAuth, async (req, res) => {
   try {
@@ -64,7 +82,7 @@ router.get('/edit-comment/:id', withAuth, async (req, res) => {
 
     const commentData = await Comment.findByPk(req.params.id, {
 
-      include: [{ model:User}],
+      include: [{ model: User }],
     });
 
     const comment = commentData.get({ plain: true });

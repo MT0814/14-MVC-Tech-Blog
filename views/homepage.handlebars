@@ -1,8 +1,7 @@
-
 <div class="container-fluid" id="comment">
 
   <div class="row">
-      {{#each comments as |comment|}}
+    {{#each comments as |comment|}}
     <div class="col-lg-3 col-sm-12 small-cards">
       <div class="card">
         <img src="{{comment.image}}" width="10px" class="card-img-top" alt="{{comment.title}}">
@@ -11,13 +10,40 @@
           <p class="card-text">{{comment.content}}</p>
           <span class="bywho">Created by <span class="username">{{user.name}}</span> on {{format_date
             comment.date_created}} </span>
+          <br>
+          {{#if logged_in}}
+          <a href="/add-comment" class="btn btn-blue mt-3" id="comment-btn">Comment</a>
+          {{else}}
+          <a href="/add-comment" class="btn btn-blue mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <div class="tooltip-2"> Comment
+              <span class="tooltip2text">Log in please</span>
+            </div>
+          </a>
+          {{/if}}
         </div>
       </div>
+      {{#if click_comment}}
+      <div class="container-fluid form-top new-comment-form">
+        <form>
+          <div class="mb-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <textarea type="text" class="form-control" id="title" placeholder="new technology 2021"></textarea>
+          </div>
+          <div class="mb-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Content</label>
+            <textarea type="text" class="form-control" id="content"
+              placeholder="Artificial Intelligence (AI) and Machine Learning"></textarea>
+          </div>
+          <button type="submit" class="btn btn-blue" id="save-btn">Save Comment</button>
+        </form>
+      </div>
+      <script src="/js/add-comment.js"></script>
+      {{/if}}
     </div>
-      {{/each}}
+    {{/each}}
   </div>
-
 
 </div>
 
 
+<script src="/js/comment-btn.js"></script>
