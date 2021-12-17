@@ -14,7 +14,7 @@
           {{#if logged_in}}
           <a href="/add-comment" class="btn btn-blue mt-3" id="comment-btn">Comment</a>
           {{else}}
-          <a href="/add-comment" class="btn btn-blue mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          <a class="btn btn-blue mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
             <div class="tooltip-2"> Comment
               <span class="tooltip2text">Log in please</span>
             </div>
@@ -22,7 +22,7 @@
           {{/if}}
         </div>
       </div>
-      {{#if click_comment}}
+      {{#if logged_in}}
       <div class="container-fluid form-top new-comment-form">
         <form>
           <div class="mb-3 ">
