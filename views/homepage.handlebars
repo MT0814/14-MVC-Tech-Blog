@@ -2,26 +2,19 @@
 
   <div class="row">
     {{#each comments as |comment|}}
-    <div class="col-lg-3 col-sm-12 small-cards">
+    <div class="col-lg-3 col-md-6 col-sm-12 small-cards">
       <div class="card">
-        <img src="{{comment.image}}" width="10px" class="card-img-top" alt="{{comment.title}}">
-        <div class="card-body">
-          <h5 class="card-title" data-id="{{comment.id}}">{{comment.title}}</h5>
-          <p class="card-text">{{comment.content}}</p>
-          <span class="bywho">Created by <span class="username">{{user.name}}</span> on {{format_date
-            comment.date_created}} </span>
-          <br>
-          {{#if logged_in}}
-          <a href="/add-comment" class="btn btn-blue mt-3" id="comment-btn">Comment</a>
-          {{else}}
-          <a class="btn btn-blue mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <div class="tooltip-2"> Comment
-              <span class="tooltip2text">Log in please</span>
-            </div>
-          </a>
-          {{/if}}
-        </div>
+        <a class="card-link" href="/comment/{{comment.id}}">
+          <img src="{{comment.image}}" width="10px" class="card-img-top" alt="{{comment.title}}">
+          <div class="card-body">
+            <h5 class="card-title hp-title" data-id="{{comment.id}}">{{comment.title}}</h5>
+            <p class="card-text hp-text">{{comment.content}}</p>
+            <span class="bywho">Created by <span class="username">{{user.name}}</span> on {{format_date
+              comment.date_created}} </span>
+            <br>
+          </div>
       </div>
+      </a>
       {{#if logged_in}}
       <div class="container-fluid form-top new-comment-form">
         <form>
@@ -44,6 +37,3 @@
   </div>
 
 </div>
-
-
-<script src="/js/comment-btn.js"></script>

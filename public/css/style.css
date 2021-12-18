@@ -170,6 +170,7 @@ li.nav-item {
   display: flex;
   margin-bottom: 3%;
 }
+
 .card-title {
   font-weight: 700;
   font-size: 1.3em;
@@ -179,10 +180,26 @@ li.nav-item {
   font-weight: 500;
 }
 
+.hp-text,
+.hp-title {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .card {
   padding: 10px;
   margin-top: 20px;
   background-color: rgb(231, 231, 231);
+}
+
+.card-link {
+  color: rgb(112, 112, 112);
+}
+
+.card-link:hover {
+  text-decoration: underline rgba(33, 180, 199, 0.815);
+  color: var(--main);
 }
 
 .btn-blue {
@@ -190,12 +207,16 @@ li.nav-item {
   color: var(--white);
 }
 
+.text-white {
+  color: var(--white);
+}
+
 .bywho {
-  color: rgb(148, 148, 148);
+  color: rgb(112, 112, 112);
 }
 
 .username {
-  color: rgb(60, 168, 182);
+  color: orange;
 }
 
 /* footer */
@@ -335,6 +356,12 @@ h5 {
   text-align: center;
 }
 
+.comment-img {
+  width: 20%;
+}
+p.card-text.margin-left {
+  margin-left: 20px;
+}
 .mt-x {
   margin-top: 5%;
 }
@@ -349,6 +376,7 @@ h5 {
 td {
   text-align: left;
 }
+
 /* account-comment page */
 
 .fa.fa-trash-o {

@@ -1,18 +1,68 @@
 <!-- a comment page -->
 
-<div class="container-fluid img-center" id="recipes"> <div class="container-fluid img-center" id="recipes">
-     
-      <div>
-        <h3 class="text-orange">{{comment.title}}</h3>
+<div class="container-fluid img-center" id="comment">
+  <div class="col small-cards">
+    <div class="card">
+      <div class="clearfix">
+        <img src="{{comment.image}}" class="col-md-6 float-md-start mt-4 mb-3 ms-md-3 comment-img" alt="{{comment.title}}">
+        <h5 class="card-title mt-3" data-id="{{comment.id}}">{{comment.title}}</h5>
+        <div class="card-body">
+          <p class="card-text margin-left">{{comment.content}}</p>
+          <span class="bywho">Created by <span class="username">{{user.name}}</span> on {{format_date
+            comment.date_created}} </span>
+          <br>
+        </div>
+        <a href="/api/comment/{{comment.id}}" class="btn btn-blue mt-3 mb-3" id="comment-btn">Comment</a>
       </div>
-      <div>
-        <h4 class="mt-x">Date</h4>
-        <p class="text-center mt-3">{{format_date comment.date_created}}</p>
-      </div>
-
-      <div>
-        <h4 class="mt-x">Comment</h4>
-        <p class="text-center mt-3">{{comment.content}}</p>
-      </div>
-  
     </div>
+
+    {{!-- {{#if logged_in}} --}}
+
+    {{!-- {{else}}
+    <a class="btn btn-blue mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      <div class="tooltip-2"> Comment
+        <span class="tooltip2text">Log in please</span>
+      </div>
+    </a>
+    {{/if}} --}}
+
+  </div>
+
+  {{!-- Other developers' comments --}}
+
+  <div class="row">
+    {{#each comments as |comment|}}
+    <div class="col-lg-3 col-md-6 col-sm-12 small-cards">
+      <div class="card">
+        <a class="card-link" href="/comment/{{comment.id}}">
+          <img src="{{comment.image}}" width="10px" class="card-img-top" alt="{{comment.title}}">
+          <div class="card-body">
+            <h5 class="card-title" data-id="{{comment.id}}">{{comment.title}}</h5>
+            <p class="card-text">{{comment.content}}</p>
+            <span class="bywho">Created by <span class="username">{{user.name}}</span> on {{format_date
+              comment.date_created}} </span>
+            <br>
+          </div>
+      </div>
+      </a>
+      {{#if logged_in}}
+      <div class="container-fluid form-top new-comment-form">
+        <form>
+          <div class="mb-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <textarea type="text" class="form-control" id="title" placeholder="new technology 2021"></textarea>
+          </div>
+          <div class="mb-3 ">
+            <label for="exampleFormControlInput1" class="form-label">Content</label>
+            <textarea type="text" class="form-control" id="content"
+              placeholder="Artificial Intelligence (AI) and Machine Learning"></textarea>
+          </div>
+          <button type="submit" class="btn btn-blue" id="save-btn">Save Comment</button>
+        </form>
+      </div>
+      <script src="/js/add-comment.js"></script>
+      {{/if}}
+    </div>
+    {{/each}}
+  </div>
+</div>

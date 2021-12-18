@@ -21,7 +21,7 @@ THEN I am presented with the homepage, which includes existing blog posts if any
 WHEN I click on the Minibot Tech Blog option on the nav bar
 THEN I am taken to the homepage
 WHEN I click on any other links in the menu buger bar
-THEN I am prompted log In, Account and Contact options
+THEN I am prompted Home, Add Comment, Account, Log In and Contact options
 WHEN I choose to sign up
 THEN I am prompted to create a username and password
 WHEN I click on the sign-up button
