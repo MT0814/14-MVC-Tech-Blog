@@ -39,14 +39,27 @@ router.get('/', async (req, res) => {
 
 // route to get one comment by its id
 router.get('/comment/:id', async (req, res) => {
+  console.log("Hello Comment ID++++")
   try {
-    const commentData = await Comment.findByPk(req.params.id);
+    const commentData = await Comment.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+
     if (!commentData) {
       res.status(404).json({ message: 'No comment with this id!' });
       return;
     }
     const comment = commentData.get({ plain: true });
-    res.render('comment', { comment, username: req.session.username });
+    res.render("comment", {
+      comment,
+      logged_in: req.session.logged_in,
+      username: req.session.username,
+    })
   } catch (err) {
     res.status(500).json(err);
   };

@@ -57,6 +57,10 @@ main {
   font-size: 1.5em;
 }
 
+.text-orange {
+  color: rgb(255, 210, 125);
+}
+
 .navbar-light .navbar-brand {
   color: rgb(33, 180, 199);
   font-size: 1.8em;

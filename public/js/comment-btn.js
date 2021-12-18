@@ -1,7 +1,7 @@
 async function newFormHandler(event) {
     event.preventDefault();
 
-    const response = await fetch('/:id', {
+    const response = await fetch('/api/comment/:id', {
         method: 'POST',
         body: JSON.stringify({
             title,

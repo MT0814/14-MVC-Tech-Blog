@@ -6,6 +6,7 @@ const withAuth = require('../../utils/auth');
 
 // get one comment by its id
 router.get("/:id", withAuth, async (req, res) => {
+    console.log("---------comment------------")
     try {
         const commentData = await Comment.findByPk(req.params.id)
         const comment = commentData.get({ plain: true });
