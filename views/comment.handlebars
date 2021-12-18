@@ -13,7 +13,8 @@
           <br>
         </div>
 
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-blue mt-3 mb-3" id="comment-btn">Comment</a>
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-blue mt-3 mb-3"
+          id="comment-btn">Comment</a>
       </div>
     </div>
 
@@ -32,17 +33,18 @@
         <form class="form new-comment-form">
           <div class="modal-body">
             <div class="form-group mb-3">
-              {{!-- <label for="message-text" class="col-form-label">Content</label> --}}
-              <input class="form-control" type="text" placeholder="Comment here...">
+              <textarea type="text" class="form-control" id="content" placeholder="Comment here..."></textarea>
             </div>
           </div>
           <div class="modal-footer form-group">
-            <a href="/comment/{{comment.id}}"><button type="submit" class="btn btn-blue" id="comment-btn">Submit</button></a>
+            <button type="submit" class="btn btn-blue" id="comment-btn">Submit</button>
           </div>
         </form>
       </div>
     </div>
   </div>
+
+<script src="/js/comment-btn.js"></script>
 
   {{!-- Other developers' comments --}}
 
@@ -62,9 +64,9 @@
       </div>
       </a>
 
-      
-      
-      <script src="/js/comment-btn.js"></script>
+
+
+
 
     </div>
     {{/each}}
