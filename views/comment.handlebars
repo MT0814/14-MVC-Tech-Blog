@@ -1,5 +1,4 @@
 <!-- a comment page -->
-
 <div class="container-fluid img-center" id="comment">
   <div class="col small-cards">
     <div class="card">
@@ -14,41 +13,42 @@
           <br>
         </div>
 
-        <a class="btn btn-blue mt-3 mb-3" id="comment-btn">Comment</a>
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-blue mt-3 mb-3" id="comment-btn">Comment</a>
       </div>
     </div>
-    {{#if comment.length}}
-    <form>
-      <div class="mb-3 ">
-        <label for="exampleFormControlInput1" class="form-label">Title</label>
-        <textarea type="text" class="form-control" id="title" placeholder="new technology 2021"></textarea>
-      </div>
-      <div class="mb-3 ">
-        <label for="exampleFormControlInput1" class="form-label">Content</label>
-        <textarea type="text" class="form-control" id="content"
-          placeholder="Artificial Intelligence (AI) and Machine Learning"></textarea>
-      </div>
-      <button type="submit" class="btn btn-blue" id="save-btn">Save Comment</button>
-    </form>
-    {{/if}}
 
-    {{!-- {{#if logged_in}} --}}
+  </div>
 
-    {{!-- {{else}}
-    <a class="btn btn-blue mt-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-      <div class="tooltip-2"> Comment
-        <span class="tooltip2text">Log in please</span>
+
+  {{!-- Comment form modal component --}}
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Your Comment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="form login-form">
+          <div class="modal-body">
+            <div class="form-group mb-3">
+              {{!-- <label for="message-text" class="col-form-label">Content</label> --}}
+              <input class="form-control" type="text" placeholder="Comment here...">
+            </div>
+          </div>
+          <div class="modal-footer form-group">
+            <a href="/comment/{{comment.id}}"><button type="submit" class="btn btn-blue" id="comment-submit">Submit</button></a>
+          </div>
+        </form>
       </div>
-    </a>
-    {{/if}} --}}
-
+    </div>
   </div>
 
   {{!-- Other developers' comments --}}
 
   <div class="row">
     {{#each comments as |comment|}}
-    <div class="col-lg-3 col-md-6 col-sm-12 small-cards" id="add-comment">
+    <div class="col small-cards" id="add-comment">
       <div class="card">
         <a class="card-link" href="/comment/{{comment.id}}">
           <img src="{{comment.image}}" width="10px" class="card-img-top" alt="{{comment.title}}">
@@ -62,20 +62,7 @@
       </div>
       </a>
 
-      <div class="container-fluid form-top new-comment-form">
-        <form>
-          <div class="mb-3 ">
-            <label for="exampleFormControlInput1" class="form-label">Title</label>
-            <textarea type="text" class="form-control" id="title" placeholder="new technology 2021"></textarea>
-          </div>
-          <div class="mb-3 ">
-            <label for="exampleFormControlInput1" class="form-label">Content</label>
-            <textarea type="text" class="form-control" id="content"
-              placeholder="Artificial Intelligence (AI) and Machine Learning"></textarea>
-          </div>
-          <button type="submit" class="btn btn-blue" id="save-btn">Save Comment</button>
-        </form>
-      </div>
+      
       <script src="/js/add-comment.js"></script>
 
     </div>

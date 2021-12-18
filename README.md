@@ -29,9 +29,9 @@ THEN my user credentials are saved and I am logged into the site
 WHEN I revisit the site at a later time and choose to log in
 THEN I am prompted to enter my username and password
 WHEN I am signed in to the site
-THEN I see navigation links for the Minibot Tech Blog(homepage), the Account(Dashboard), and the option to log out
-WHEN I click on the homepage option in the navigation
-THEN I am taken to the the Minibot Tech Blog(homepage) and presented with existing blog posts that include the post title and the date created
+THEN I see navigation links for Home, the Account(Dashboard), and the option to log out
+WHEN I click on the home option in the navigation
+THEN I am taken to the homepage and presented with existing blog posts that include the post title and the date created
 WHEN I click on an existing blog post
 THEN I am presented with the post title, contents, post creator’s username, and date created for that post and have the option to leave a comment
 WHEN I enter a comment and click on the submit button while signed in

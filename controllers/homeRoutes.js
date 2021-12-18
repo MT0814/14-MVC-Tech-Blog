@@ -54,6 +54,7 @@ router.get('/comment/:id', async (req, res) => {
       res.status(404).json({ message: 'No comment with this id!' });
       return;
     }
+
     const comment = commentData.get({ plain: true });
     res.render("comment", {
       comment,
