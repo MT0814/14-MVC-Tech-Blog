@@ -4,7 +4,7 @@ const withAuth = require('../../utils/auth');
 
 
 
-// route to create/add a comment  
+// route to create/add a comment under the user's account 
 router.post('/', withAuth, async (req, res) => {
   try {
     const commentData = await Comment.create({

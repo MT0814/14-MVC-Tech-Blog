@@ -29,7 +29,7 @@
           <h5 class="modal-title" id="exampleModalLabel">Add Your Comment</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form class="form login-form">
+        <form class="form new-comment-form">
           <div class="modal-body">
             <div class="form-group mb-3">
               {{!-- <label for="message-text" class="col-form-label">Content</label> --}}
@@ -37,7 +37,7 @@
             </div>
           </div>
           <div class="modal-footer form-group">
-            <a href="/comment/{{comment.id}}"><button type="submit" class="btn btn-blue" id="comment-submit">Submit</button></a>
+            <a href="/comment/{{comment.id}}"><button type="submit" class="btn btn-blue" id="comment-btn">Submit</button></a>
           </div>
         </form>
       </div>
@@ -63,7 +63,8 @@
       </a>
 
       
-      <script src="/js/add-comment.js"></script>
+      
+      <script src="/js/comment-btn.js"></script>
 
     </div>
     {{/each}}

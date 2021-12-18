@@ -108,6 +108,9 @@ router.get('/edit-comment/:id', withAuth, async (req, res) => {
 
 
 
+
+
+
 router.get('/signup', (req, res) => {
   if (req.session.signed_up) {
     res.redirect('/account-comment');
