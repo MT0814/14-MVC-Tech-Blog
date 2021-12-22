@@ -8,22 +8,29 @@
         <h5 class="card-title mt-3" data-id="{{comment.id}}">{{comment.title}}</h5>
         <div class="card-body">
           <p class="card-text margin-left">{{comment.content}}</p>
-          <span class="bywho">Created by <span class="username">{{user.name}}</span> on {{format_date
+          <span class="bywho">Created by <span class="username">{{comment.user.name}}</span> on {{format_date
             comment.date_created}} </span>
           <br>
         </div>
-
-        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-blue mt-3 mb-3"
+        {{#if logged_in}}
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn btn-blue mt-3 mb-3"
           id="comment-btn">Comment</a>
+        {{else}}
+        <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-blue mt-3 mb-3" id="comment-btn">
+          <div class="tooltip-1">Comment<span class="tooltip1text">Log in please</span>
+          </div>
+        </a>
+        {{/if}}
       </div>
     </div>
 
   </div>
 
 
+
   {{!-- Comment form modal component --}}
 
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -37,38 +44,80 @@
             </div>
           </div>
           <div class="modal-footer form-group">
-            <button type="submit" class="btn btn-blue" id="comment-btn">Submit</button>
+            <button type="submit" class="btn btn-blue">Submit</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 
-<script src="/js/comment-btn.js"></script>
+  <script src="/js/comment-btn.js"></script>
 
   {{!-- Other developers' comments --}}
 
   <div class="row">
-    {{#each comments as |comment|}}
+    {{#each comment.Note as |note|}}
     <div class="col small-cards" id="add-comment">
       <div class="card">
-        <a class="card-link" href="/comment/{{comment.id}}">
-          <img src="{{comment.image}}" width="10px" class="card-img-top" alt="{{comment.title}}">
-          <div class="card-body">
-            <h5 class="card-title" data-id="{{comment.id}}">{{comment.title}}</h5>
-            <p class="card-text">{{comment.content}}</p>
-            <span class="bywho">Created by <span class="username">{{user.name}}</span> on {{format_date
-              comment.date_created}} </span>
-            <br>
-          </div>
+        <div class="card-body">
+          <p class="card-text">{{note.content}}</p>
+          <span class="bywho">Created by <span class="username">{{username}}</span> on {{format_date
+            comment.date_created}} </span>
+          <br>
+        </div>
       </div>
-      </a>
-
-
-
-
-
     </div>
     {{/each}}
   </div>
 </div>
+
+
+
+<!-- login Modal components-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form class="form login-form">
+          <div class="modal-body">
+
+            <div class="form-group mb-3">
+              <label for="email-login" class="col-form-label">Email</label>
+              <input class="form-control" type="text" id="email-login" placeholder="name@example.com">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="form-group mb-3">
+              <label for="password-login" class="col-form-label">Password</label>
+              <input class="form-control" type="password" id="password-login" placeholder="Password">
+              <div class="col-auto">
+                <span id="passwordHelpInline" class="form-text">
+                  Must be 8-20 characters long.
+                </span>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer form-group">
+            <a href="/signup"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sign
+                Up</button></a>
+            {{#if has_comment}}
+            <a href="/account-comment"><button type="submit" class="btn btn-blue" id="login">Log
+                In</button></a>
+            {{else}}
+            <a href="/account-comment"><button type="submit" class="btn btn-blue" id="login">Log In</button></a>
+            {{/if}}
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+<script src="/js/login.js"></script>

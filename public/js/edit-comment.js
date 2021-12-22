@@ -8,7 +8,7 @@ async function editFormHandler(event) {
     window.location.toString().split('/').length - 1
   ];
 
-  // What part of our application will handle this 'put' request?
+
   // The Controller will handle this 'put' request.
   console.log("value", id)
   const response = await fetch(`/api/edit-comment/${id}`, {
@@ -22,7 +22,7 @@ async function editFormHandler(event) {
     },
   });
 
-  // What happens if the response is ok?
+
   // If the response is ok, that means that the comment was updated successfully. 
   if (response.ok) {
     document.location.replace(`/account-comment`);

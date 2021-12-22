@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../models');
-const Comment = require('../models/Comment');
+const { User, Note, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -13,6 +12,7 @@ router.get('/', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
+        
       ],
     });
 
@@ -47,6 +47,16 @@ router.get('/comment/:id', async (req, res) => {
           model: User,
           attributes: ['name'],
         },
+        {
+          model: Note,
+          attributes: ['content'], 
+          include:[
+            {
+              model: User,
+              attributes: ['name'],
+            }
+          ]
+        }
       ],
     });
 
@@ -56,6 +66,7 @@ router.get('/comment/:id', async (req, res) => {
     }
 
     const comment = commentData.get({ plain: true });
+    console.log(comment)
     res.render("comment", {
       comment,
       logged_in: req.session.logged_in,

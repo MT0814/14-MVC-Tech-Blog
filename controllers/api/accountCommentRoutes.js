@@ -2,23 +2,6 @@ const router = require('express').Router();
 const Comment = require('../../models/Comment');
 
 
-// get one comment by its id
-// router.get("/:id", async (req, res) => {
-//     try {
-//         const commentData = await Comment.findByPk(req.params.id);
-//         const comment = commentData.get({ plain: true });
-//         res.render("account-comment", {
-//             comment,
-//             logged_in: req.session.logged_in,
-//             username: req.session.username,
-//         })
-//     } catch (err) {
-//         res.status(500).json(err)
-//     }
-
-// })
-
-
 router.put('/:id', async (req, res) => {
 
     // It is sending the data to the Model so that one comment can be updated with new data in the database.
@@ -41,7 +24,6 @@ router.put('/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
-
 
 
 
