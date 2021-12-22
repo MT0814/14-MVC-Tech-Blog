@@ -4,7 +4,6 @@ const withAuth = require('../../utils/auth');
 const Note = require('../../models/Note');
 
 
-
 // route to create/add a comment for other post  
 router.post('/:id', withAuth, async (req, res) => {
     try {
@@ -16,7 +15,6 @@ router.post('/:id', withAuth, async (req, res) => {
 
         });
         console.log(noteData)
-
         res.status(200).json(noteData);
     } catch (err) {
         console.log(err)
@@ -25,7 +23,6 @@ router.post('/:id', withAuth, async (req, res) => {
 });
 
 router.put('/:id', async (req, res) => {
-    // Where is this action method sending the data from the body of the fetch request? Why?
     // It is sending the data to the Model so that one note can be updated with new data in the database.
     try {
         console.log('Comment update Routes------------------')
@@ -40,7 +37,7 @@ router.put('/:id', async (req, res) => {
                 },
             }
         );
-        // If the database is updated successfully, what happens to the updated data below?
+   
         // The updated data (note) is then sent back to handler that dispatched the fetch request.
         res.status(200).json(note);
     } catch (err) {

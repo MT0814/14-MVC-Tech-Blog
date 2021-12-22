@@ -32,7 +32,7 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
     try {
         const commentData = await Comment.destroy({ where: { id: req.params.id } })
-        console.log('commentData: ', commentData),
+
             res.render('account-comment', {
                 logged_in: req.session.logged_in,
                 username: req.session.username
