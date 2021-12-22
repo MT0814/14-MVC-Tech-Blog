@@ -95,9 +95,9 @@ This homework is graded based on the following criteria:
 ## Website Screenshots
 
 - Desktop version
-  ![screenshot](./assets/mini-bot-screenshot.png)
+  ![screenshot](./Assets/mini-bot-screenshot.png)
 - Mobile version
-  ![screenshot](./assets/iPhone-x.png)
+  ![screenshot](./Assets/iPhone-x.png)
 
 Please click [here](https://https://minibot-tech.herokuapp.com/) for the minibot tech blog website
 
