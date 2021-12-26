@@ -3,7 +3,6 @@ const router = require('express').Router();
 const withAuth = require('../../utils/auth');
 const Note = require('../../models/Note');
 
-
 // route to create/add a comment for other post  
 router.post('/:id', withAuth, async (req, res) => {
     try {
@@ -37,7 +36,7 @@ router.put('/:id', async (req, res) => {
                 },
             }
         );
-   
+
         // The updated data (note) is then sent back to handler that dispatched the fetch request.
         res.status(200).json(note);
     } catch (err) {

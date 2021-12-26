@@ -3,7 +3,7 @@
     "id":1,
     "user_id":1,
     "title": "Welcome to Minibot Tech Blog!",
-    "image":"/images/minbot.png",
+    "image":"/images/bot.png",
     "content": "You can leave any comments related to any new, old tech info. or discuss with others with your innovative idea about them.",
     "date_created": "December 1, 2021 10:00:00 UTC"
   },
@@ -12,8 +12,8 @@
     "id":2,
     "user_id":2,
     "title": "BB-8",
-    "image":"/images/bb-8.jpeg",
-    "content": "BB-8, sometimes spelled and pronounced Beebee-Ate and nicknamed BB, was a BB-series astromech droid who operated approximately thirty years after the Battle of Endor. He had a dome head, similar to that of R2 series astromech droids, with the bulk of his body made up of a ball on which the droid's head rolled. BB-8 was mostly white, with some silver and orange on his body, as well as a black photoreceptor. The droid belonged to Resistance pilot Poe Dameron, whom he accompanied during his flights on his T-70 X-wing starfighter. Source:wikipedia.",
+    "image":"/images/bb-8.png",
+    "content": "BB-8, sometimes spelled and pronounced Beebee-Ate and nicknamed BB, was a BB-series astromech droid who operated approximately thirty years after the Battle of Endor. He had a dome head, similar to that of R2 series astromech droids, with the bulk of his body made up of a ball on which the droid's head rolled. BB-8 was mostly white, with some silver and orange on his body, as well as a black photoreceptor. The droid belonged to Resistance pilot Poe Dameron, whom he accompanied during his flights on his T-70 X-wing starfighter. Source: wikipedia.",
     "date_created": "December 2, 2021 10:00:00 UTC"
   },
   {
@@ -21,8 +21,8 @@
     "id":3,
     "user_id":3,
     "title": "R2-D2",
-    "image":"/images/r2d2.jpg", 
-    "content": "R2-D2, pronounced Artoo-Detoo and often referred to as R2 (Artoo), was an R2-series astromech droid manufactured by Industrial Automaton with masculine programming. A smart, spunky droid who would serve a multitude of masters over his lifetime, R2-D2 was never given a full memory wipe (apart from a partial wipe of select information by Cad Bane during the senate hostage crisis) nor did he ever receive new programming, with these factors resulting in an adventurous and independent attitude. Often finding himself in pivotal moments in galactic history, his bravery and ingenuity saved the galaxy on numerous occasions. Source:wikipedia.",
+    "image":"/images/r2d2.webp", 
+    "content": "R2-D2, pronounced Artoo-Detoo and often referred to as R2 (Artoo), was an R2-series astromech droid manufactured by Industrial Automaton with masculine programming. A smart, spunky droid who would serve a multitude of masters over his lifetime, R2-D2 was never given a full memory wipe (apart from a partial wipe of select information by Cad Bane during the senate hostage crisis) nor did he ever receive new programming, with these factors resulting in an adventurous and independent attitude. Often finding himself in pivotal moments in galactic history, his bravery and ingenuity saved the galaxy on numerous occasions. Source: wikipedia.",
     "date_created": "December 3, 2021 10:00:00 UTC"
   },
   {
@@ -30,8 +30,8 @@
     "id":4,
     "user_id":4,
     "title": "C-3PO",
-    "image":"/images/c3po.jpg",
-    "content": "C-3PO, sometimes spelled See-Threepio, often referred to as Threepio and by some as 3-So, was a 3PO-series protocol droid designed to interact with organics, programmed primarily for etiquette and protocol. He was fluent in over six million forms of communication, and developed a fussy and worry-prone personality throughout his many decades of operation. Along with his counterpart, the astromech droid R2-D2, C-3PO constantly found himself directly involved in pivotal moments of galactic history, and aided in saving the galaxy on many occasions. Source:wikipedia.",
+    "image":"/images/c-3po.jpg",
+    "content": "C-3PO, sometimes spelled See-Threepio, often referred to as Threepio and by some as 3-So, was a 3PO-series protocol droid designed to interact with organics, programmed primarily for etiquette and protocol. He was fluent in over six million forms of communication, and developed a fussy and worry-prone personality throughout his many decades of operation. Along with his counterpart, the astromech droid R2-D2, C-3PO constantly found himself directly involved in pivotal moments of galactic history, and aided in saving the galaxy on many occasions. Source: wikipedia.",
     "date_created": "December 4, 2021 10:00:00 UTC"
 
   },
@@ -41,8 +41,33 @@
     "user_id":5,
     "title": "HTML",
     "image":"/images/640px-HTML5_logo.png",
-    "content": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript). Source:wikipedia.",
+    "content": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript). Source: wikipedia.",
     "date_created": "December 5, 2021 10:00:00 UTC"
+  },
+  {   
+    
+    "id":6,
+    "user_id":4,
+    "title": "Amazon launches home-patrolling robot Astro",
+    "image":"/images/amazon-astro.jpg",
+    "content": "Astro is a new and different kind of robot, one that’s designed to help customers with a range of tasks like home monitoring and keeping in touch with family. It brings together new advancements in artificial intelligence, computer vision, sensor technology, and voice and edge computing in a package that’s designed to be helpful and convenient.",
+    "date_created": "December 6, 2021 10:00:00 UTC"
+  },{   
+    
+    "id":7,
+    "user_id":6,
+    "title": "What is the most advanced robot around today?",
+    "image":"/images/honda-motor.jpg",
+    "content": "Honda Motor Corporation’s Asimo, with its humanoid appearance and ability to walk and climb stairs, has been dubbed the world’s most advanced robot. Yet during the crisis at the Fukushima nuclear power plant, there was surprise that this triumph of Japanese robotic engineering wasn’t deployed in the reconnaissance and clean-up operation. Instead, US-made military robots were drafted in. Perhaps that’s because Asimo is primarily a PR device whose ultimate function is in domestic settings or helping the elderly. Elsewhere, researchers at Carnegie Mellon University have created one of the world’s most sophisticated snake-like robots and a team at the University of California at Berkeley is working on robots the size of insects. While Asimo’s walking is undoubtedly impressive, robotic snakes and bugs can reach parts that Asimo can’t. So, a robot’s sophistication should really be measured against the tasks it’s been designed to perform. Source: www.sciencefocus.com",
+    "date_created": "December 7, 2021 10:00:00 UTC"
+  },{   
+    
+    "id":8,
+    "user_id":7,
+    "title": "Ameca robot shows off new level of human-like facial expressions",
+    "image":"/images/Ameca-robot.png",
+    "content": "Ameca has been designed as a robot platform—customers who buy it can add AI and other software to give the robot desired abilities. The software it comes with is geared toward creating life-like expressions. It can smile, frown, wink and open and close its mouth. It can also show surprise or frustration or amusement. In a video released by the company, the robot appears to wake, as if from a nap. As it does so, it appears to be surprised by its existence. And it behaves as if startled when suddenly looking at the camera—as if suddenly spotting the viewer looking at it. Source: https://techxplore.com/.",
+    "date_created": "December 6, 2021 10:00:00 UTC"
   }
 ]
 

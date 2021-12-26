@@ -30,5 +30,19 @@
     "name": "Cal",
     "email": "cal@me.com",
     "password": "123456789"
+  },
+  {
+    "id": 6,
+    "name": "Maddy Staple",
+    "email": "maddy@me.com",
+    "password": "123456789"
+  },
+  {
+    "id": 7,
+    "name": "Bob Yirka",
+    "email": "bob@me.com",
+    "password": "123456789"
   }
+
+
 ]

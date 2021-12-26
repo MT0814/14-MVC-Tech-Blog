@@ -13,11 +13,11 @@
 }
 
 body {
-  background-color: rgb(92, 92, 92);
+  background-color: rgb(58, 58, 58);
 }
 
 main {
-  background-color: rgb(92, 92, 92);
+  background-color: rgb(58, 58, 58);
   display: flex;
 }
 
@@ -123,7 +123,7 @@ li.nav-item {
 .tooltip-1 .tooltip1text {
   visibility: hidden;
   width: 8em;
-  background-color: orange;
+  background-color: rgba(0, 0, 0, 0.404);
   color: rgb(245, 245, 245);
   text-align: center;
   border-radius: 6px;
@@ -168,8 +168,12 @@ li.nav-item {
   opacity: 1;
 }
 /* Cards */
-
-
+.card-img-top {
+  padding: 10px;
+}
+.card-animate:hover {
+  transition: width 3s, rgba(255, 0, 0, 0);
+}
 .small-cards {
   justify-content: center;
   display: flex;
@@ -183,6 +187,7 @@ li.nav-item {
 
 .card-text {
   font-weight: 500;
+  color: rgb(90, 90, 90);
 }
 
 .hp-text,
@@ -193,8 +198,8 @@ li.nav-item {
 }
 
 .card {
-  padding: 10px;
-  margin-top: 20px;
+  /* padding: 10px;
+  margin-top: 20px; */
   background-color: rgb(231, 231, 231);
 }
 
@@ -217,7 +222,7 @@ li.nav-item {
 }
 
 .bywho {
-  color: rgb(112, 112, 112);
+  color: rgb(160, 160, 160);
 }
 
 .username {
@@ -301,7 +306,6 @@ h5 {
   h5 {
     font-size: 0.9em;
   }
-
 }
 
 @media screen and (max-width: 478px) {
@@ -324,7 +328,6 @@ h5 {
   h5 {
     font-size: 0.9em;
   }
- 
 }
 
 /* icon */
@@ -346,8 +349,15 @@ h5 {
 }
 
 .form-label {
-  color: whitesmoke;
+  color: rgb(33, 180, 199);
+  font-weight: 500;
+  font-size: 1.1em;
 }
+
+.form-text-b {
+  color: rgb(195, 195, 195);
+}
+
 .form-top {
   width: 50%;
   margin-bottom: 3%;
@@ -359,15 +369,17 @@ h5 {
 }
 
 /*comments page */
-.img-center {
-  text-align: center;
-}
 
 .comment-img {
-  width: 11em;
+  /* display: block; */
+  margin-right: 0px;
+  margin-left: 0px;
+  /* padding: 0px; */
+  width: 100%;
 }
-
-
+.card-padding {
+  padding: 0px;
+}
 /* 
 p.card-text.margin-left {
   margin-left: 20px;
@@ -395,8 +407,9 @@ td {
 
 .ms-auto {
   color: var(--gray);
-  margin-bottom: -1em;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .edit {

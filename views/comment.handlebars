@@ -1,135 +1,67 @@
 <!-- a comment page -->
-<div class="container-fluid img-center" id="comment">
+<div class="container-fluid text-center" id="comment">
   <div class="col small-cards">
     <div class="card">
       <div class="clearfix">
-        <img src="{{comment.image}}" class="col-md-6 float-md-start mt-4 mb-3 ms-md-3 comment-img"
-          alt="{{comment.title}}">
-        <div class="container mt-3">
+        <div class="container">
           <div class=" row">
-            <div class="col">
-              <h5 class="card-title mt-3" data-id="{{comment.id}}">{{comment.title}}</h5>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
+            <div class="col card-padding">
+              <img src="{{comment.image}}" class="card-img-top text-center comment-img" alt="{{comment.title}}">
+              <h5 class="card-title mt-5" data-id="{{comment.id}}">{{comment.title}}</h5>
               <div class="card-body">
                 <p class="card-text margin-left">{{comment.content}}</p>
-                <span class="bywho">Created by <span class="username">{{comment.user.name}}</span> on {{format_date
+                <span class="bywho">By <span class="username">{{comment.user.name}}</span> on {{format_date
                   comment.date_created}} </span>
-                <br>
               </div>
+
             </div>
           </div>
+          {{!-- Other developers' comments --}}
 
           <div class="row">
-            <div class="col">
-              {{#if logged_in}}
-              <a data-bs-toggle="modal" data-bs-target="#exampleModal1" class="btn btn-blue mt-3 mb-3"
-                id="comment-btn">Comment</a>
-              {{else}}
-              <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-blue mt-3 mb-3" id="comment-btn">
-                <div class="tooltip-1">Comment<span class="tooltip1text">Log in please</span>
+            <form class="form new-comment-form">
+              <div class="modal-body">
+                <div class="form-group mb-3">
+                  <h5 class="card-title mt-5" data-id="{{comment.id}}">{{comment.title}}</h5>
+                  <textarea type="text" class="form-control" id="content" placeholder="Comment here..."></textarea>
                 </div>
-              </a>
-              {{/if}}
+              </div>
+              <div class="modal-footer form-group">
+                {{#if logged_in}}
+                <button type="submit" class="btn btn-blue" id="comment-btn">Submit</button>
+                {{else}}
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal"><button class="btn btn-blue" id="comment-btn">
+                    <div class="tooltip-1">Submit<span class="tooltip1text">Log in please</span></div>
+                  </button></a>
+                {{/if}}
+              </div>
+            </form>
+          </div>
+          {{!-- other comments --}}
+          <div class="row">
+            {{#each Notes as |note|}}
+            <div class="col-lg-3 col-sm-12 small-cards">
+              <div class="card">
+                <div class="card-body">
+                  <p class="card-text">{{note.content}}</p>
+                  <span class="bywho">Created by <span class="username">{{note.user.name}}</span> on {{format_date
+                    note.date_created}} </span>
+                </div>
+              </div>
             </div>
+            {{/each}}
           </div>
         </div>
       </div>
+      <script src="/js/comment-btn.js"></script>
     </div>
 
-  </div>
 
 
 
-  {{!-- Comment form modal component --}}
-
-  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Add Your Comment</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <form class="form new-comment-form">
-          <div class="modal-body">
-            <div class="form-group mb-3">
-              <textarea type="text" class="form-control" id="content" placeholder="Comment here..."></textarea>
-            </div>
-          </div>
-          <div class="modal-footer form-group">
-            <button type="submit" class="btn btn-blue">Submit</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script src="/js/comment-btn.js"></script>
-
-  {{!-- Other developers' comments --}}
-
-  <div class="row">
-    {{#each comment.Note as |note|}}
-    <div class="col small-cards" id="add-comment">
-      <div class="card">
-        <div class="card-body">
-          <p class="card-text">{{note.content}}</p>
-          <span class="bywho">Created by <span class="username">{{username}}</span> on {{format_date
-            comment.date_created}} </span>
-          <br>
-        </div>
-      </div>
-    </div>
-    {{/each}}
   </div>
 </div>
 
-
-
-<!-- login Modal components-->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <form class="form login-form">
-        <div class="modal-body">
-
-          <div class="form-group mb-3">
-            <label for="email-login" class="col-form-label">Email</label>
-            <input class="form-control" type="text" id="email-login" placeholder="name@example.com">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-          </div>
-          <div class="form-group mb-3">
-            <label for="password-login" class="col-form-label">Password</label>
-            <input class="form-control" type="password" id="password-login" placeholder="Password">
-            <div class="col-auto">
-              <span id="passwordHelpInline" class="form-text">
-                Must be 8-20 characters long.
-              </span>
-            </div>
-          </div>
-
-        </div>
-        <div class="modal-footer form-group">
-          <a href="/signup"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sign
-              Up</button></a>
-          {{#if has_comment}}
-          <a href="/account-comment"><button type="submit" class="btn btn-blue" id="login">Log
-              In</button></a>
-          {{else}}
-          <a href="/account-comment"><button type="submit" class="btn btn-blue" id="login">Log In</button></a>
-          {{/if}}
-        </div>
-
-      </form>
-    </div>
-  </div>
-</div>
 {{#if logged_in}}
 <script src="/js/logout.js"></script>
 {{/if}}

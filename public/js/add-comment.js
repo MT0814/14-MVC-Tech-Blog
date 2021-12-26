@@ -3,7 +3,7 @@ async function newFormHandler(event) {
   console.log("inside")
   const title = document.querySelector('#title').value.trim();
   const content = document.querySelector('#content').value.trim();
-  const image = "images/default.jpg";
+  const image = "images/default.webp";
 
 
   if (content && title) {
