@@ -66,6 +66,6 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 
 ![screenshot](./Assets/mini-bot-screenshot.png)
 
-Please click [here](https://https://minibot-tech.herokuapp.com/) for the minibot tech blog website
+Please click [here](https://minibot-tech.herokuapp.com/) for the minibot tech blog website
 
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
