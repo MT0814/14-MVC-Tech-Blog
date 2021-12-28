@@ -58,7 +58,7 @@ main {
 }
 
 .text-orange {
-  color: rgb(255, 210, 125);
+  color: rgb(255, 230, 184);
 }
 
 .navbar-light .navbar-brand {
@@ -142,7 +142,7 @@ li.nav-item {
 .tooltip-2 .tooltip2text {
   visibility: hidden;
   width: 7em;
-  background-color: orange;
+  /* background-color: orange; */
   color: rgb(245, 245, 245);
   text-align: center;
   border-radius: 6px;
@@ -169,10 +169,10 @@ li.nav-item {
 }
 /* Cards */
 .card-img-top {
-  padding: 10px;
+  padding: 0px;
 }
-.card-animate:hover {
-  transition: width 3s, rgba(255, 0, 0, 0);
+.card {
+  border: none;
 }
 .small-cards {
   justify-content: center;
@@ -198,8 +198,6 @@ li.nav-item {
 }
 
 .card {
-  /* padding: 10px;
-  margin-top: 20px; */
   background-color: rgb(231, 231, 231);
 }
 
@@ -226,7 +224,7 @@ li.nav-item {
 }
 
 .username {
-  color: orange;
+  color: rgb(253, 180, 45);
 }
 
 /* footer */
@@ -371,26 +369,18 @@ h5 {
 /*comments page */
 
 .comment-img {
-  /* display: block; */
+  display: block;
   margin-right: 0px;
   margin-left: 0px;
-  /* padding: 0px; */
   width: 100%;
 }
-.card-padding {
-  padding: 0px;
+
+.textarea.form-control {
+  background-color: white;
 }
-/* 
-p.card-text.margin-left {
-  margin-left: 20px;
-} */
 .mt-x {
   margin-top: 5%;
 }
-/* 
-.text-left {
-  text-align: left;
-} */
 
 .table-border {
   border: transparent;
@@ -439,6 +429,5 @@ td {
 
 /* edit comment page */
 h2 {
-  /* font-size: 1.5em; */
-  color: white;
+  color: rgb(255, 230, 184);
 }

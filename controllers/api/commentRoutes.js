@@ -3,10 +3,14 @@ const Comment = require('../../models/Comment');
 const withAuth = require('../../utils/auth');
 const Note = require('../../models/Note');
 
+
+
+
+
 // route to create/add a comment for other post  
 router.post('/:id', withAuth, async (req, res) => {
     try {
-        console.log('Comment post Routes------------------')
+        console.log('Note post Routes------------------')
         const noteData = await Note.create({
             ...req.body,
             user_id: req.session.user_id,

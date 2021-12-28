@@ -48,7 +48,7 @@ router.get('/comment/:id', async (req, res) => {
         },
         {
           model: Note,
-          attributes: ['content'],
+
           include: [
             {
               model: User,
@@ -65,7 +65,7 @@ router.get('/comment/:id', async (req, res) => {
     }
 
     const comment = commentData.get({ plain: true });
-    console.log(comment)
+    console.log(comment, ' Looking for note data')
     res.render("comment", {
       comment,
       logged_in: req.session.logged_in,

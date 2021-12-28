@@ -4,31 +4,29 @@
     <div class="card">
       <div class="clearfix">
         <div class="container">
-          <div class=" row">
-            <div class="col card-padding">
+          <div class="row">
+            <div class="col" style="padding:0px">
               <img src="{{comment.image}}" class="card-img-top text-center comment-img" alt="{{comment.title}}">
-              <h5 class="card-title mt-5" data-id="{{comment.id}}">{{comment.title}}</h5>
               <div class="card-body">
+                <h5 class="card-title mt-3">{{comment.title}}</h5>
                 <p class="card-text margin-left">{{comment.content}}</p>
                 <span class="bywho">By <span class="username">{{comment.user.name}}</span> on {{format_date
                   comment.date_created}} </span>
               </div>
-
             </div>
           </div>
-          {{!-- Other developers' comments --}}
+          {{!-- comments form --}}
 
-          <div class="row">
-            <form class="form new-comment-form">
+          <div class="row mt-2 mb-1">
+            <form class="form new-comment-form" data-id={{comment.id}}>
               <div class="modal-body">
-                <div class="form-group mb-3">
-                  <h5 class="card-title mt-5" data-id="{{comment.id}}">{{comment.title}}</h5>
+                <div class="form-group ">
                   <textarea type="text" class="form-control" id="content" placeholder="Comment here..."></textarea>
                 </div>
               </div>
               <div class="modal-footer form-group">
                 {{#if logged_in}}
-                <button type="submit" class="btn btn-blue" id="comment-btn">Submit</button>
+                <button type="submit" class="btn btn-blue" id="submit">Submit</button>
                 {{else}}
                 <a data-bs-toggle="modal" data-bs-target="#exampleModal"><button class="btn btn-blue" id="comment-btn">
                     <div class="tooltip-1">Submit<span class="tooltip1text">Log in please</span></div>
@@ -37,33 +35,30 @@
               </div>
             </form>
           </div>
-          {{!-- other comments --}}
-          <div class="row">
-            {{#each Notes as |note|}}
-            <div class="col-lg-3 col-sm-12 small-cards">
-              <div class="card">
-                <div class="card-body">
-                  <p class="card-text">{{note.content}}</p>
-                  <span class="bywho">Created by <span class="username">{{note.user.name}}</span> on {{format_date
-                    note.date_created}} </span>
-                </div>
-              </div>
-            </div>
-            {{/each}}
-          </div>
         </div>
+
+
       </div>
-      <script src="/js/comment-btn.js"></script>
+
     </div>
 
-
-
-
+  </div>
+  {{!-- other comments --}}
+  <div class="row">
+    {{#each comment.Notes as |note|}}
+    <div class="col-lg-3 col-sm-12 small-cards">
+      <div class="card">
+        <div class="card-body">
+          <p class="card-text">{{note.content}}</p>
+          <span class="bywho">Created by <span class="username">{{note.user.name}}</span> on {{format_date
+            note.date_created}} </span>
+        </div>
+      </div>
+    </div>
+    {{/each}}
   </div>
 </div>
 
-
-{{!-- Login  --}}
 
 <!-- User log in page -->
 
@@ -114,6 +109,7 @@
 {{#if logged_in}}
 <script src="/js/logout.js"></script>
 {{/if}}
-</body>
+
 
 <script src="/js/login.js"></script>
+<script src="/js/comment-btn.js"></script>

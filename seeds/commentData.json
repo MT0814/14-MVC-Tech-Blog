@@ -39,10 +39,10 @@
     
     "id":5,
     "user_id":5,
-    "title": "HTML",
-    "image":"/images/640px-HTML5_logo.png",
-    "content": "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript). Source: wikipedia.",
-    "date_created": "December 5, 2021 10:00:00 UTC"
+    "title": "Nauticus Robotics taking ocean robots public via SPAC",
+    "image":"/images/searobot.jpeg",
+    "content": "Nauticus Robotics is merging with CleanTech Acquisition Corp., a publicly-traded special purpose acquisition company (SPAC). The deal values Nauticus at $560 million, according to the company. CleanTech Acquisition Corp. is currently listed on the NASDAQ. Once the deal is approved, the combined company will be known as Nauticus Robotics, Inc. and trade under the ticker symbol “KITT.” Formerly known as Houston Mechatronics, Nauticus is developing surface and underwater robots that perform a variety of ocean tasks, including transportation, data collection, equipment maintenance and more. Nauticus’ first product, Aquanaut, is a tetherless underwater robot for both long distance ocean data collection and close-in dexterous manipulation of the subsea environment. It supports government and defense and other commercial industry sectors.A slew of robotics companies went public or announced plans to go public via SPAC in 2021. The list includes Aurora Innovation, Berkshire Grey, Bright Machines, Memic, Sarcos Robotics, Symbotic and Vicarious Surgical. Autonomous trucking company Plus had its SPAC merger called off due to regulatory challenges in China. Source: therobotreport.com",
+    "date_created": "December 21, 2021 10:00:00 UTC"
   },
   {   
     
