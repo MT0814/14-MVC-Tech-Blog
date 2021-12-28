@@ -3,7 +3,7 @@
     "id":1,
     "user_id":1,
     "title": "Welcome to Minibot Tech Blog!",
-    "image":"/images/bot.png",
+    "image":"/images/botimg.jpeg",
     "content": "You can leave any comments related to any new, old tech info. or discuss with others with your innovative idea about them.",
     "date_created": "December 1, 2021 10:00:00 UTC"
   },
