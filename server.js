@@ -6,6 +6,7 @@ const routes = require('./controllers');
 const helpers = require('./utils/helpers');
 const sequelize = require('./config/connection');
 const compression = require('compression');
+const { max } = require('./models/User');
 
 
 
@@ -19,7 +20,7 @@ const hbs = exphbs.create({ helpers });
 // Configure and link a session object with the sequelize store
 const sess = {
   secret: 'Super secret secret',
-  cookie: {},
+  cookie: { expires: "2h", maxAge: 1000 * 60 * 60 * 2 },
   resave: false,
   saveUninitialized: true,
   store: new SequelizeStore({
